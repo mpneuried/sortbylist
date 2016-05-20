@@ -1,0 +1,37 @@
+{
+	"name": "sortbylist",
+	"version": "0.0.1",
+	"description": "Small helper to sort a collection by a given list of id&#39;s",
+	"keywords": [],
+	"homepage": "https://github.com/mpneuried/sortbylist",
+	"bugs": "https://github.com/mpneuried/sortbylist/issues",
+	"author": {
+		"name": "mpneuried",
+		"email": "",
+		"url": "https://github.com/mpneuried/sortbylist"
+	},
+	"main": "./index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mpneuried/sortbylist.git"
+	},
+	"scripts": {
+		"test": "mocha -r should -t 3000 test/main.js"
+	},
+	"engines": {
+		"node": ">= &gt;= 4.0.0"
+	},
+	"license": "MIT",
+	"dependencies": {},
+	"devDependencies": {
+		"should": "8.x",
+		"grunt": "1.x",
+		"lodash": "4.x",
+		"grunt-contrib-watch": "1.0",
+		"grunt-contrib-coffee": "1.x",
+		"grunt-contrib-clean": "1.x",
+		"grunt-include-replace": "*",
+		"grunt-mocha-cli": "2.x",
+		"grunt-newer": "1.x"
+	}
+}

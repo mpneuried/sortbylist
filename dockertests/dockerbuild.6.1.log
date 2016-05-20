@@ -1,0 +1,2022 @@
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.53 MB
+Step 1 : FROM node:6.1
+ ---> 04a4aab809b8
+Step 2 : MAINTAINER M. Peter <mp@tcs.de>
+ ---> Using cache
+ ---> f0cbc00404c4
+Step 3 : RUN apt-get update -qq && apt-get upgrade -y && apt-get install -y build-essential
+ ---> Using cache
+ ---> 3580a591a69a
+Step 4 : RUN mkdir -p /usr/src/
+ ---> Using cache
+ ---> 81fce8d02f69
+Step 5 : WORKDIR /usr/src/
+ ---> Using cache
+ ---> 2e05c60516dc
+Step 6 : COPY package.json /usr/src/package.json
+ ---> 2e846b8916b3
+Removing intermediate container 70b7be437ae4
+Step 7 : RUN npm install -g mocha
+ ---> Running in 3181b6fcf0d9
+[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mit worked if it ends with[0m[91m ok
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91musing[0m[91m npm@3.8.6
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91musing[0m[91m node@v6.1.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:13 AM
+[0m[91mnpm[0m[91m [0m[91mhttp request[0m[91m GET https://registry.npmjs.org/mocha
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m 200[0m[91m https://registry.npmjs.org/mocha
+[0m[91mnpm[0m[91m [0m[91minfo addNameTag[0m[91m [ 'mocha', 'latest' ]
+[0m[91mnpm [0m[91minfo retry[0m[91m fetch attempt 1 at 6:47:13 AM
+[0m[91mnpm info [0m[91mattempt registry request try #1 at 6:47:13 AM
+[0m[91mnpm[0m[91m http fetch[0m[91m GET https://registry.npmjs.org/mocha/-/mocha-2.4.5.tgz
+[0m[91mnpm[0m[91m http fetch[0m[91m 200 https://registry.npmjs.org/mocha/-/mocha-2.4.5.tgz
+[0m[91mnpm[0m[91m info [0m[91mattempt registry request try #1 at 6:47:13 AM
+[0m[91mnpm[0m[91m http[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/commander
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mattempt registry request try #1 at 6:47:13 AM
+[0m[91mnpm[0m[91m http[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/debug
+[0m[91mnpm[0m[91m info attempt registry request try #1 at 6:47:13 AM
+npm http[0m[91m request GET https://registry.npmjs.org/diff
+[0m[91mnpm[0m[91m info[0m[91m attempt[0m[91m registry request try #1 at 6:47:13 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/escape-string-regexp
+[0m[91mnpm[0m[91m info [0m[91mattempt registry request try #1 at 6:47:13 AM
+[0m[91mnpm [0m[91mhttp [0m[91mrequest[0m[91m GET https://registry.npmjs.org/glob
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:13 AM
+[0m[91mnpm[0m[91m http [0m[91mrequest[0m[91m GET https://registry.npmjs.org/growl
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:13 AM
+[0m[91mnpm [0m[91mhttp[0m[91m request GET https://registry.npmjs.org/jade
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:13 AM
+[0m[91mnpm[0m[91m http request[0m[91m GET https://registry.npmjs.org/mkdirp
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mattempt registry request try #1 at 6:47:13 AM
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91mrequest GET https://registry.npmjs.org/supports-color
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200 https://registry.npmjs.org/commander
+[0m[91mnpm[0m[91m info retry[0m[91m fetch attempt 1 at 6:47:13 AM
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:13 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m fetch[0m[91m GET https://registry.npmjs.org/commander/-/commander-2.3.0.tgz
+[0m[91mnpm[0m[91m http [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/commander/-/commander-2.3.0.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m 200[0m[91m https://registry.npmjs.org/supports-color
+[0m[91mnpm[0m[91m http [0m[91m200 https://registry.npmjs.org/diff
+[0m[91mnpm [0m[91mhttp [0m[91m200 https://registry.npmjs.org/growl
+[0m[91mnpm[0m[91m http [0m[91m200 https://registry.npmjs.org/mkdirp
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91m200[0m[91m https://registry.npmjs.org/debug
+[0m[91mnpm[0m[91m http [0m[91m200[0m[91m https://registry.npmjs.org/escape-string-regexp
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mretry fetch attempt 1 at 6:47:14 AM
+[0m[91mnpm [0m[91minfo [0m[91mattempt registry request try #1 at 6:47:14 AM
+[0m[91mnpm [0m[91mhttp[0m[91m fetch[0m[91m GET https://registry.npmjs.org/supports-color/-/supports-color-1.2.0.tgz
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mretry fetch attempt 1 at 6:47:14 AM
+[0m[91mnpm[0m[91m info[0m[91m attempt registry request try #1 at 6:47:14 AM
+[0m[91mnpm[0m[91m http[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/diff/-/diff-1.4.0.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:14 AM
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mattempt registry request try #1 at 6:47:14 AM
+[0m[91mnpm[0m[91m http fetch[0m[91m GET https://registry.npmjs.org/growl/-/growl-1.8.1.tgz
+[0m[91mnpm[0m[91m info[0m[91m retry[0m[91m fetch attempt 1 at 6:47:14 AM
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:14 AM
+[0m[91mnpm [0m[91mhttp [0m[91mfetch GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz
+[0m[91mnpm [0m[91mhttp[0m[91m 200[0m[91m https://registry.npmjs.org/glob
+[0m[91mnpm[0m[91m info [0m[91mretry[0m[91m fetch attempt 1 at 6:47:14 AM
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:14 AM
+[0m[91mnpm[0m[91m http[0m[91m [0m[91mfetch GET https://registry.npmjs.org/debug/-/debug-2.2.0.tgz
+[0m[91mnpm [0m[91mhttp [0m[91m200 https://registry.npmjs.org/jade
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/supports-color/-/supports-color-1.2.0.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/diff/-/diff-1.4.0.tgz
+[0m[91mnpm [0m[91mhttp[0m[91m fetch[0m[91m 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz
+[0m[91mnpm[0m[91m http[0m[91m fetch 200 https://registry.npmjs.org/growl/-/growl-1.8.1.tgz
+[0m[91mnpm[0m[91m http fetch 200 https://registry.npmjs.org/debug/-/debug-2.2.0.tgz
+[0m[91mnpm[0m[91m info[0m[91m retry[0m[91m fetch attempt 1 at 6:47:14 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:14 AM
+[0m[91mnpm [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.2.tgz
+[0m[91mnpm [0m[91mWARN [0m[91mdeprecated jade@0.26.3: Jade has been renamed to pug, please install the latest version of pug instead of jade
+[0m[91mnpm [0m[91minfo [0m[91mretry fetch attempt 1 at 6:47:14 AM
+[0m[91mnpm [0m[91minfo [0m[91mattempt registry request try #1 at 6:47:14 AM
+[0m[91mnpm [0m[91mhttp [0m[91mfetch GET https://registry.npmjs.org/glob/-/glob-3.2.3.tgz
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:14 AM
+[0m[91mnpm [0m[91minfo [0m[91mattempt registry request try #1 at 6:47:14 AM
+[0m[91mnpm [0m[91mhttp [0m[91mfetch GET https://registry.npmjs.org/jade/-/jade-0.26.3.tgz
+[0m[91mnpm[0m[91m http[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.2.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/glob/-/glob-3.2.3.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/jade/-/jade-0.26.3.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:14 AM
+npm http request GET https://registry.npmjs.org/ms
+[0m[91mnpm http 200 https://registry.npmjs.org/ms
+[0m[91mnpm info [0m[91mretry fetch attempt 1 at 6:47:14 AM
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:14 AM
+[0m[91mnpm[0m[91m http [0m[91mfetch[0m[91m GET https://registry.npmjs.org/ms/-/ms-0.7.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/ms/-/ms-0.7.1.tgz
+[0m[91mnpm [0m[91minfo [0m[91mattempt[0m[91m registry request try #1 at 6:47:14 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/minimatch
+[0m[91mnpm[0m[91m info [0m[91mattempt registry request try #1 at 6:47:14 AM
+[0m[91mnpm [0m[91mhttp [0m[91mrequest[0m[91m GET https://registry.npmjs.org/graceful-fs
+[0m[91mnpm[0m[91m [0m[91minfo attempt[0m[91m registry request try #1 at 6:47:14 AM
+[0m[91mnpm [0m[91mhttp [0m[91mrequest[0m[91m GET https://registry.npmjs.org/inherits
+[0m[91mnpm http 200 https://registry.npmjs.org/inherits
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91m200 https://registry.npmjs.org/minimatch
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200 https://registry.npmjs.org/graceful-fs
+[0m[91mnpm WARN deprecated graceful-fs@2.0.3: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry fetch attempt 1 at 6:47:14 AM
+[0m[91mnpm info[0m[91m attempt[0m[91m registry request try #1 at 6:47:14 AM
+[0m[91mnpm [0m[91mhttp fetch[0m[91m GET https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:14 AM
+npm info attempt registry request try #1 at 6:47:14 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/minimatch/-/minimatch-0.2.14.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:14 AM
+npm info attempt registry request try #1 at 6:47:14 AM
+npm http fetch GET https://registry.npmjs.org/graceful-fs/-/graceful-fs-2.0.3.tgz
+[0m[91mnpm http [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/minimatch/-/minimatch-0.2.14.tgz
+[0m[91mnpm http[0m[91m fetch[0m[91m 200 https://registry.npmjs.org/graceful-fs/-/graceful-fs-2.0.3.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:14 AM
+[0m[91mnpm http [0m[91mrequest[0m[91m GET https://registry.npmjs.org/lru-cache
+[0m[91mnpm info attempt registry request try #1 at 6:47:14 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/sigmund
+[0m[91mnpm http [0m[91m200 https://registry.npmjs.org/sigmund
+[0m[91mnpm[0m[91m http 200[0m[91m https://registry.npmjs.org/lru-cache
+[0m[91mnpm info retry fetch attempt 1 at 6:47:14 AM
+npm info attempt registry request try #1 at 6:47:14 AM
+npm http fetch GET https://registry.npmjs.org/sigmund/-/sigmund-1.0.1.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m retry[0m[91m fetch attempt 1 at 6:47:14 AM
+npm info attempt registry request try #1 at 6:47:14 AM
+npm http fetch GET https://registry.npmjs.org/lru-cache/-/lru-cache-2.7.3.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/sigmund/-/sigmund-1.0.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/lru-cache/-/lru-cache-2.7.3.tgz
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mretry fetch attempt 1 at 6:47:15 AM
+[0m[91mnpm [0m[91minfo[0m[91m attempt[0m[91m registry request try #1 at 6:47:15 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m fetch GET https://registry.npmjs.org/commander/-/commander-0.6.1.tgz
+[0m[91mnpm [0m[91minfo [0m[91mretry fetch attempt 1 at 6:47:15 AM
+[0m[91mnpm[0m[91m info[0m[91m attempt registry request try #1 at 6:47:15 AM
+[0m[91mnpm[0m[91m http [0m[91mfetch GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+[0m[91mnpm [0m[91mhttp fetch 200 https://registry.npmjs.org/commander/-/commander-0.6.1.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91mfetch 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+[0m[91mnpm[0m[91m info attempt registry request try #1 at 6:47:15 AM
+[0m[91mnpm http[0m[91m request GET https://registry.npmjs.org/minimist
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/minimist
+[0m[91mnpm info[0m[91m retry fetch attempt 1 at 6:47:15 AM
+[0m[91mnpm [0m[91minfo [0m[91mattempt registry request try #1 at 6:47:15 AM
+[0m[91mnpm [0m[91mhttp[0m[91m [0m[91mfetch GET https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz
+[0m[91mnpm http [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m commander@2.3.0~preinstall: commander@2.3.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle[0m[91m diff@1.4.0~preinstall: diff@1.4.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m escape-string-regexp@1.0.2~preinstall: escape-string-regexp@1.0.2
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m graceful-fs@2.0.3~preinstall: graceful-fs@2.0.3
+[0m[91mnpm info[0m[91m lifecycle[0m[91m growl@1.8.1~preinstall: growl@1.8.1
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle inherits@2.0.1~preinstall: inherits@2.0.1
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m commander@0.6.1~preinstall: commander@0.6.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle[0m[91m mkdirp@0.3.0~preinstall: mkdirp@0.3.0
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m jade@0.26.3~preinstall: jade@0.26.3
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle lru-cache@2.7.3~preinstall: lru-cache@2.7.3
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle minimist@0.0.8~preinstall: minimist@0.0.8
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m mkdirp@0.5.1~preinstall: mkdirp@0.5.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m ms@0.7.1~preinstall: ms@0.7.1
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle debug@2.2.0~preinstall: debug@2.2.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m sigmund@1.0.1~preinstall: sigmund@1.0.1
+[0m[91mnpm[0m[91m info lifecycle[0m[91m minimatch@0.2.14~preinstall: minimatch@0.2.14
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m glob@3.2.3~preinstall: glob@3.2.3
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m supports-color@1.2.0~preinstall: supports-color@1.2.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle mocha@2.4.5~preinstall: mocha@2.4.5
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlinkStuff commander@2.3.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m diff@1.4.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m escape-string-regexp@1.0.2
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff[0m[91m graceful-fs@2.0.3
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff[0m[91m growl@1.8.1
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff[0m[91m inherits@2.0.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff[0m[91m commander@0.6.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff mkdirp@0.3.0
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m jade@0.26.3
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff[0m[91m lru-cache@2.7.3
+[0m[91mnpm[0m[91m info[0m[91m linkStuff[0m[91m minimist@0.0.8
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m mkdirp@0.5.1
+[0m[91mnpm[0m[91m info [0m[91mlinkStuff[0m[91m ms@0.7.1
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff[0m[91m debug@2.2.0
+[0m[91mnpm[0m[91m info[0m[91m linkStuff sigmund@1.0.1
+[0m[91mnpm [0m[91minfo linkStuff[0m[91m minimatch@0.2.14
+[0m[91mnpm[0m[91m [0m[91minfo linkStuff glob@3.2.3
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m supports-color@1.2.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff mocha@2.4.5
+[0m/usr/local/bin/mocha -> /usr/local/lib/node_modules/mocha/bin/mocha
+/usr/local/bin/_mocha -> /usr/local/lib/node_modules/mocha/bin/_mocha
+[91mnpm [0m[91minfo lifecycle commander@2.3.0~install: commander@2.3.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m diff@1.4.0~install: diff@1.4.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m escape-string-regexp@1.0.2~install: escape-string-regexp@1.0.2
+[0m[91mnpm[0m[91m [0m[91minfo lifecycle[0m[91m graceful-fs@2.0.3~install: graceful-fs@2.0.3
+[0m[91mnpm[0m[91m info [0m[91mlifecycle growl@1.8.1~install: growl@1.8.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle inherits@2.0.1~install: inherits@2.0.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle commander@0.6.1~install: commander@0.6.1
+[0m[91mnpm[0m[91m info lifecycle mkdirp@0.3.0~install: mkdirp@0.3.0
+[0m[91mnpm info[0m[91m lifecycle jade@0.26.3~install: jade@0.26.3
+[0m[91mnpm info lifecycle lru-cache@2.7.3~install: lru-cache@2.7.3
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m minimist@0.0.8~install: minimist@0.0.8
+[0m[91mnpm [0m[91minfo lifecycle mkdirp@0.5.1~install: mkdirp@0.5.1
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle ms@0.7.1~install: ms@0.7.1
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m debug@2.2.0~install: debug@2.2.0
+[0m[91mnpm [0m[91minfo lifecycle sigmund@1.0.1~install: sigmund@1.0.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle minimatch@0.2.14~install: minimatch@0.2.14
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m glob@3.2.3~install: glob@3.2.3
+[0m[91mnpm [0m[91minfo lifecycle supports-color@1.2.0~install: supports-color@1.2.0
+[0m[91mnpm info[0m[91m lifecycle mocha@2.4.5~install: mocha@2.4.5
+[0m[91mnpm info[0m[91m lifecycle commander@2.3.0~postinstall: commander@2.3.0
+[0m[91mnpm info[0m[91m [0m[91mlifecycle diff@1.4.0~postinstall: diff@1.4.0
+[0m[91mnpm info[0m[91m lifecycle[0m[91m escape-string-regexp@1.0.2~postinstall: escape-string-regexp@1.0.2
+[0m[91mnpm info[0m[91m lifecycle graceful-fs@2.0.3~postinstall: graceful-fs@2.0.3
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle growl@1.8.1~postinstall: growl@1.8.1
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m inherits@2.0.1~postinstall: inherits@2.0.1
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle commander@0.6.1~postinstall: commander@0.6.1
+[0m[91mnpm info[0m[91m lifecycle mkdirp@0.3.0~postinstall: mkdirp@0.3.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle jade@0.26.3~postinstall: jade@0.26.3
+[0m[91mnpm [0m[91minfo lifecycle lru-cache@2.7.3~postinstall: lru-cache@2.7.3
+[0m[91mnpm [0m[91minfo lifecycle minimist@0.0.8~postinstall: minimist@0.0.8
+[0m[91mnpm [0m[91minfo lifecycle mkdirp@0.5.1~postinstall: mkdirp@0.5.1
+[0m[91mnpm info[0m[91m lifecycle ms@0.7.1~postinstall: ms@0.7.1
+[0m[91mnpm info[0m[91m lifecycle debug@2.2.0~postinstall: debug@2.2.0
+[0m[91mnpm info[0m[91m lifecycle sigmund@1.0.1~postinstall: sigmund@1.0.1
+[0m[91mnpm [0m[91minfo lifecycle minimatch@0.2.14~postinstall: minimatch@0.2.14
+[0m[91mnpm info[0m[91m lifecycle glob@3.2.3~postinstall: glob@3.2.3
+[0m[91mnpm [0m[91minfo lifecycle supports-color@1.2.0~postinstall: supports-color@1.2.0
+[0m[91mnpm info[0m[91m lifecycle mocha@2.4.5~postinstall: mocha@2.4.5
+[0m/usr/local/lib
+`-- mocha@2.4.5 
+  +-- commander@2.3.0 
+  +-- debug@2.2.0 
+  | `-- ms@0.7.1 
+  +-- diff@1.4.0 
+  +-- escape-string-regexp@1.0.2 
+  +-- glob@3.2.3 
+  | +-- graceful-fs@2.0.3 
+  | +-- inherits@2.0.1 
+  | `-- minimatch@0.2.14 
+  |   +-- lru-cache@2.7.3 
+  |   `-- sigmund@1.0.1 
+  +-- growl@1.8.1 
+  +-- jade@0.26.3 
+  | +-- commander@0.6.1 
+  | `-- mkdirp@0.3.0 
+  +-- mkdirp@0.5.1 
+  | `-- minimist@0.0.8 
+  `-- supports-color@1.2.0 
+
+[91mnpm [0m[91minfo [0m[91mok 
+[0m ---> a3963fac7178
+Removing intermediate container 3181b6fcf0d9
+Step 8 : RUN npm install
+ ---> Running in 084cfa7cc2cf
+[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mit worked if it ends with[0m[91m ok
+[0m[91mnpm info[0m[91m [0m[91musing npm@3.8.6
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91musing node@v6.1.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:17 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m request[0m[91m GET https://registry.npmjs.org/should
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:17 AM
+[0m[91mnpm [0m[91mhttp [0m[91mrequest[0m[91m GET https://registry.npmjs.org/grunt
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mattempt[0m[91m registry request try #1 at 6:47:17 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/lodash
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm [0m[91mhttp [0m[91mrequest[0m[91m GET https://registry.npmjs.org/grunt-contrib-watch
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm [0m[91mhttp[0m[91m request[0m[91m GET https://registry.npmjs.org/grunt-contrib-coffee
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+npm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest GET https://registry.npmjs.org/grunt-contrib-clean
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/grunt-include-replace
+[0m[91mnpm info[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91mrequest[0m[91m GET https://registry.npmjs.org/grunt-mocha-cli
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/grunt-newer
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/grunt-contrib-clean
+[0m[91mnpm[0m[91m http[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/grunt-include-replace
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m 200[0m[91m https://registry.npmjs.org/grunt-newer
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/grunt-contrib-coffee
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91m200[0m[91m https://registry.npmjs.org/grunt
+[0m[91mnpm[0m[91m http[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/grunt-contrib-watch
+[0m[91mnpm[0m[91m http[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/lodash
+[0m[91mnpm [0m[91mhttp[0m[91m [0m[91m200 https://registry.npmjs.org/should
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/grunt/-/grunt-1.0.1.tgz
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m fetch[0m[91m GET https://registry.npmjs.org/grunt-include-replace/-/grunt-include-replace-4.0.1.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm info[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91mfetch[0m[91m GET https://registry.npmjs.org/grunt-contrib-clean/-/grunt-contrib-clean-1.0.0.tgz
+[0m[91mnpm info[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm info[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/grunt-newer/-/grunt-newer-1.2.0.tgz
+[0m[91mnpm [0m[91minfo[0m[91m retry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm info[0m[91m [0m[91mattempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm[0m[91m http [0m[91mfetch[0m[91m GET https://registry.npmjs.org/grunt-contrib-coffee/-/grunt-contrib-coffee-1.0.0.tgz
+[0m[91mnpm [0m[91mhttp [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/grunt/-/grunt-1.0.1.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm [0m[91minfo attempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm http [0m[91mfetch[0m[91m GET https://registry.npmjs.org/grunt-contrib-watch/-/grunt-contrib-watch-1.0.0.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/grunt-newer/-/grunt-newer-1.2.0.tgz
+[0m[91mnpm[0m[91m http fetch 200 https://registry.npmjs.org/grunt-contrib-clean/-/grunt-contrib-clean-1.0.0.tgz
+[0m[91mnpm http [0m[91mfetch 200 https://registry.npmjs.org/grunt-contrib-coffee/-/grunt-contrib-coffee-1.0.0.tgz
+[0m[91mnpm info[0m[91m retry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm [0m[91minfo attempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm [0m[91mhttp [0m[91mfetch[0m[91m GET https://registry.npmjs.org/should/-/should-8.3.2.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm info[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/lodash/-/lodash-4.12.0.tgz
+[0m[91mnpm [0m[91mhttp fetch[0m[91m 200 https://registry.npmjs.org/grunt-include-replace/-/grunt-include-replace-4.0.1.tgz
+[0m[91mnpm [0m[91mhttp [0m[91mfetch 200 https://registry.npmjs.org/grunt-contrib-watch/-/grunt-contrib-watch-1.0.0.tgz
+[0m[91mnpm [0m[91mhttp fetch[0m[91m 200 https://registry.npmjs.org/should/-/should-8.3.2.tgz
+[0m[91mnpm [0m[91mhttp fetch[0m[91m 200 https://registry.npmjs.org/lodash/-/lodash-4.12.0.tgz
+[0m[91mnpm [0m[91mhttp [0m[91m200[0m[91m https://registry.npmjs.org/grunt-mocha-cli
+[0m[91mnpm info[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mattempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/grunt-mocha-cli/-/grunt-mocha-cli-2.1.0.tgz
+[0m[91mnpm http[0m[91m [0m[91mfetch 200 https://registry.npmjs.org/grunt-mocha-cli/-/grunt-mocha-cli-2.1.0.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/coffee-script
+[0m[91mnpm info attempt[0m[91m registry request try #1 at 6:47:18 AM
+npm http request GET https://registry.npmjs.org/dateformat
+[0m[91mnpm info attempt registry request try #1 at 6:47:18 AM
+npm [0m[91mhttp request[0m[91m GET https://registry.npmjs.org/eventemitter2
+[0m[91mnpm info [0m[91mattempt registry request try #1 at 6:47:18 AM
+npm [0m[91mhttp request GET https://registry.npmjs.org/exit
+[0m[91mnpm[0m[91m [0m[91minfo attempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm http request[0m[91m GET https://registry.npmjs.org/findup-sync
+[0m[91mnpm info [0m[91mattempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm http request[0m[91m GET https://registry.npmjs.org/grunt-cli
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/grunt-known-options
+[0m[91mnpm info attempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm http[0m[91m request GET https://registry.npmjs.org/grunt-legacy-log
+[0m[91mnpm info attempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/grunt-legacy-util
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/iconv-lite
+[0m[91mnpm info attempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm http [0m[91mrequest GET https://registry.npmjs.org/js-yaml
+[0m[91mnpm info [0m[91mattempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/nopt
+[0m[91mnpm[0m[91m info [0m[91mattempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm http [0m[91mrequest GET https://registry.npmjs.org/path-is-absolute
+[0m[91mnpm info attempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm http[0m[91m request GET https://registry.npmjs.org/rimraf
+[0m[91mnpm info retry fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/glob/-/glob-7.0.3.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm http[0m[91m fetch GET https://registry.npmjs.org/minimatch/-/minimatch-3.0.0.tgz
+[0m[91mnpm http 200 https://registry.npmjs.org/coffee-script
+[0m[91mnpm http 200 https://registry.npmjs.org/exit
+[0m[91mnpm http[0m[91m 200 https://registry.npmjs.org/grunt-known-options
+[0m[91mnpm http 200 https://registry.npmjs.org/findup-sync
+[0m[91mnpm http 200 https://registry.npmjs.org/grunt-legacy-util
+[0m[91mnpm http 200 https://registry.npmjs.org/grunt-legacy-log
+[0m[91mnpm http 200 https://registry.npmjs.org/dateformat
+[0m[91mnpm http 200 https://registry.npmjs.org/grunt-cli
+[0m[91mnpm http 200 https://registry.npmjs.org/eventemitter2
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm [0m[91minfo [0m[91mattempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm [0m[91mhttp [0m[91mfetch GET https://registry.npmjs.org/coffee-script/-/coffee-script-1.10.0.tgz
+[0m[91mnpm [0m[91minfo [0m[91mretry fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm [0m[91minfo [0m[91mattempt registry request try #1 at 6:47:18 AM
+[0m[91mnpm [0m[91mhttp [0m[91mfetch GET https://registry.npmjs.org/grunt-known-options/-/grunt-known-options-1.1.0.tgz
+[0m[91mnpm [0m[91minfo[0m[91m retry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/findup-sync/-/findup-sync-0.3.0.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/exit/-/exit-0.1.2.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/grunt-legacy-util/-/grunt-legacy-util-1.0.0.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/grunt-legacy-log/-/grunt-legacy-log-1.0.0.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/dateformat/-/dateformat-1.0.12.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:18 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/grunt-cli/-/grunt-cli-1.2.0.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:19 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/eventemitter2/-/eventemitter2-0.4.14.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/coffee-script/-/coffee-script-1.10.0.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/findup-sync/-/findup-sync-0.3.0.tgz
+[0m[91mnpm[0m[91m http fetch 200 https://registry.npmjs.org/grunt-known-options/-/grunt-known-options-1.1.0.tgz
+[0m[91mnpm http[0m[91m fetch 200 https://registry.npmjs.org/grunt-legacy-util/-/grunt-legacy-util-1.0.0.tgz
+[0m[91mnpm[0m[91m http fetch 200 https://registry.npmjs.org/dateformat/-/dateformat-1.0.12.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/exit/-/exit-0.1.2.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/grunt-legacy-log/-/grunt-legacy-log-1.0.0.tgz
+[0m[91mnpm http 200 https://registry.npmjs.org/nopt
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/glob/-/glob-7.0.3.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/minimatch/-/minimatch-3.0.0.tgz
+[0m[91mnpm http 200 https://registry.npmjs.org/path-is-absolute
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/grunt-cli/-/grunt-cli-1.2.0.tgz
+[0m[91mnpm http 200[0m[91m https://registry.npmjs.org/rimraf
+[0m[91mnpm http 200 https://registry.npmjs.org/iconv-lite
+[0m[91mnpm http 200 https://registry.npmjs.org/js-yaml
+[0m[91mnpm [0m[91mhttp fetch 200 https://registry.npmjs.org/eventemitter2/-/eventemitter2-0.4.14.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http [0m[91mfetch GET https://registry.npmjs.org/nopt/-/nopt-3.0.6.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http [0m[91mfetch GET https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm [0m[91mhttp fetch GET https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.13.tgz
+[0m[91mnpm info [0m[91mretry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm[0m[91m info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http fetch[0m[91m GET https://registry.npmjs.org/rimraf/-/rimraf-2.2.8.tgz
+[0m[91mnpm info [0m[91mretry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/js-yaml/-/js-yaml-3.5.5.tgz
+[0m[91mnpm http fetch[0m[91m 200 https://registry.npmjs.org/nopt/-/nopt-3.0.6.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/js-yaml/-/js-yaml-3.5.5.tgz
+[0m[91mnpm [0m[91mhttp fetch 200 https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.13.tgz
+[0m[91mnpm [0m[91mhttp fetch 200 https://registry.npmjs.org/rimraf/-/rimraf-2.2.8.tgz
+[0m[91mnpm http [0m[91mfetch 200 https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.0.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/get-stdin
+[0m[91mnpm info [0m[91mattempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm [0m[91mhttp request[0m[91m GET https://registry.npmjs.org/meow
+[0m[91mnpm http 200 https://registry.npmjs.org/get-stdin
+[0m[91mnpm [0m[91mhttp 200 https://registry.npmjs.org/meow
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http fetch[0m[91m GET https://registry.npmjs.org/get-stdin/-/get-stdin-4.0.1.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/meow/-/meow-3.7.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/get-stdin/-/get-stdin-4.0.1.tgz
+[0m[91mnpm http [0m[91mfetch 200 https://registry.npmjs.org/meow/-/meow-3.7.0.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/camelcase-keys
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/decamelize
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/loud-rejection
+[0m[91mnpm[0m[91m info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request[0m[91m GET https://registry.npmjs.org/map-obj
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/normalize-package-data
+[0m[91mnpm info attempt[0m[91m registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/object-assign
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/read-pkg-up
+[0m[91mnpm info [0m[91mattempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/redent
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm [0m[91mhttp request GET https://registry.npmjs.org/trim-newlines
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt[0m[91m registry request try #1 at 6:47:19 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz
+[0m[91mnpm http 200 https://registry.npmjs.org/camelcase-keys
+[0m[91mnpm http 200 https://registry.npmjs.org/decamelize
+[0m[91mnpm[0m[91m http 200 https://registry.npmjs.org/map-obj
+[0m[91mnpm http 200 https://registry.npmjs.org/trim-newlines
+[0m[91mnpm http 200[0m[91m https://registry.npmjs.org/read-pkg-up
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz
+[0m[91mnpm http 200 https://registry.npmjs.org/loud-rejection
+[0m[91mnpm http [0m[91m200 https://registry.npmjs.org/redent
+[0m[91mnpm http 200 https://registry.npmjs.org/object-assign
+[0m[91mnpm http 200 https://registry.npmjs.org/normalize-package-data
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http[0m[91m fetch GET https://registry.npmjs.org/camelcase-keys/-/camelcase-keys-2.1.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm [0m[91mhttp fetch GET https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+npm http fetch[0m[91m GET https://registry.npmjs.org/map-obj/-/map-obj-1.0.1.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm [0m[91mhttp[0m[91m fetch GET https://registry.npmjs.org/trim-newlines/-/trim-newlines-1.0.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+npm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http [0m[91mfetch GET https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-1.0.1.tgz
+[0m[91mnpm [0m[91minfo retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/loud-rejection/-/loud-rejection-1.3.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http [0m[91mfetch GET https://registry.npmjs.org/redent/-/redent-1.0.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91mfetch GET https://registry.npmjs.org/object-assign/-/object-assign-4.1.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/camelcase-keys/-/camelcase-keys-2.1.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.3.5.tgz
+[0m[91mnpm http [0m[91mfetch 200 https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz
+[0m[91mnpm http [0m[91mfetch 200 https://registry.npmjs.org/map-obj/-/map-obj-1.0.1.tgz
+[0m[91mnpm http[0m[91m fetch 200 https://registry.npmjs.org/trim-newlines/-/trim-newlines-1.0.0.tgz
+[0m[91mnpm http [0m[91mfetch 200 https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-1.0.1.tgz
+[0m[91mnpm [0m[91mhttp fetch 200 https://registry.npmjs.org/redent/-/redent-1.0.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/loud-rejection/-/loud-rejection-1.3.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.3.5.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/object-assign/-/object-assign-4.1.0.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/camelcase
+[0m[91mnpm http 200 https://registry.npmjs.org/camelcase
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/camelcase/-/camelcase-2.1.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/camelcase/-/camelcase-2.1.1.tgz
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request[0m[91m GET https://registry.npmjs.org/array-find-index
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/signal-exit
+[0m[91mnpm http 200 https://registry.npmjs.org/array-find-index
+[0m[91mnpm http [0m[91m200 https://registry.npmjs.org/signal-exit
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt[0m[91m registry request try #1 at 6:47:19 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/array-find-index/-/array-find-index-1.0.1.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/signal-exit/-/signal-exit-2.1.2.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/array-find-index/-/array-find-index-1.0.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/signal-exit/-/signal-exit-2.1.2.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+npm http request GET https://registry.npmjs.org/hosted-git-info
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/is-builtin-module
+[0m[91mnpm info [0m[91mattempt registry request try #1 at 6:47:19 AM
+npm http request GET https://registry.npmjs.org/semver
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request[0m[91m GET https://registry.npmjs.org/validate-npm-package-license
+[0m[91mnpm http 200 https://registry.npmjs.org/hosted-git-info
+[0m[91mnpm http 200 https://registry.npmjs.org/is-builtin-module
+[0m[91mnpm http 200 https://registry.npmjs.org/validate-npm-package-license
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info [0m[91mattempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm[0m[91m http fetch GET https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.1.5.tgz
+[0m[91mnpm http 200[0m[91m https://registry.npmjs.org/semver
+[0m[91mnpm info retry[0m[91m fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+npm http fetch GET https://registry.npmjs.org/is-builtin-module/-/is-builtin-module-1.0.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.1.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+npm http fetch GET https://registry.npmjs.org/semver/-/semver-5.1.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.1.5.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/is-builtin-module/-/is-builtin-module-1.0.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/semver/-/semver-5.1.0.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/builtin-modules
+[0m[91mnpm http [0m[91m200 https://registry.npmjs.org/builtin-modules
+[0m[91mnpm info retry fetch attempt 1 at 6:47:19 AM
+[0m[91mnpm info [0m[91mattempt registry request try #1 at 6:47:19 AM
+[0m[91mnpm [0m[91mhttp fetch GET https://registry.npmjs.org/builtin-modules/-/builtin-modules-1.1.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/builtin-modules/-/builtin-modules-1.1.1.tgz
+[0m[91mnpm info[0m[91m attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/spdx-correct
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/spdx-expression-parse
+[0m[91mnpm http 200 https://registry.npmjs.org/spdx-correct
+[0m[91mnpm http 200 https://registry.npmjs.org/spdx-expression-parse
+[0m[91mnpm info retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+npm http [0m[91mfetch GET https://registry.npmjs.org/spdx-correct/-/spdx-correct-1.0.2.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm[0m[91m http fetch GET https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-1.0.2.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/spdx-correct/-/spdx-correct-1.0.2.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-1.0.2.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/spdx-license-ids
+[0m[91mnpm http 200 https://registry.npmjs.org/spdx-license-ids
+[0m[91mnpm [0m[91minfo retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-1.2.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-1.2.1.tgz
+[0m[91mnpm info[0m[91m attempt registry request try #1 at 6:47:20 AM
+npm http request GET https://registry.npmjs.org/spdx-exceptions
+[0m[91mnpm http 200 https://registry.npmjs.org/spdx-exceptions
+[0m[91mnpm info[0m[91m retry fetch attempt 1 at 6:47:20 AM
+npm info attempt registry request try #1 at 6:47:20 AM
+npm http fetch GET https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-1.0.4.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-1.0.4.tgz
+[0m[91mnpm info attempt[0m[91m registry request try #1 at 6:47:20 AM
+npm http request GET https://registry.npmjs.org/find-up
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/read-pkg
+[0m[91mnpm[0m[91m http 200 https://registry.npmjs.org/find-up
+[0m[91mnpm http 200 https://registry.npmjs.org/read-pkg
+[0m[91mnpm info retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+npm http fetch GET https://registry.npmjs.org/find-up/-/find-up-1.1.2.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+npm http fetch GET https://registry.npmjs.org/read-pkg/-/read-pkg-1.1.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/find-up/-/find-up-1.1.2.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/read-pkg/-/read-pkg-1.1.0.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/path-exists
+[0m[91mnpm info attempt[0m[91m registry request try #1 at 6:47:20 AM
+npm http request GET https://registry.npmjs.org/pinkie-promise
+[0m[91mnpm http 200 https://registry.npmjs.org/path-exists
+[0m[91mnpm http [0m[91m200 https://registry.npmjs.org/pinkie-promise
+[0m[91mnpm info retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+npm http fetch GET https://registry.npmjs.org/path-exists/-/path-exists-2.1.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+npm http fetch GET https://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/path-exists/-/path-exists-2.1.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.1.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/pinkie
+[0m[91mnpm http 200 https://registry.npmjs.org/pinkie
+[0m[91mnpm [0m[91minfo retry fetch attempt 1 at 6:47:20 AM
+npm info attempt registry request try #1 at 6:47:20 AM
+npm http fetch GET https://registry.npmjs.org/pinkie/-/pinkie-2.0.4.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/pinkie/-/pinkie-2.0.4.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+npm http request GET https://registry.npmjs.org/load-json-file
+npm info attempt registry request try #1 at 6:47:20 AM
+npm http request GET https://registry.npmjs.org/path-type
+[0m[91mnpm http 200 https://registry.npmjs.org/path-type
+[0m[91mnpm http 200 https://registry.npmjs.org/load-json-file
+[0m[91mnpm info retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+npm http[0m[91m fetch GET https://registry.npmjs.org/path-type/-/path-type-1.1.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/load-json-file/-/load-json-file-1.1.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/path-type/-/path-type-1.1.0.tgz
+[0m[91mnpm[0m[91m http fetch 200 https://registry.npmjs.org/load-json-file/-/load-json-file-1.1.0.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/parse-json
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/pify
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/strip-bom
+[0m[91mnpm info [0m[91mretry fetch attempt 1 at 6:47:20 AM
+npm info attempt registry request try #1 at 6:47:20 AM
+npm http fetch GET https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.4.tgz
+[0m[91mnpm http 200 https://registry.npmjs.org/strip-bom
+[0m[91mnpm[0m[91m http 200[0m[91m https://registry.npmjs.org/parse-json
+[0m[91mnpm http 200 https://registry.npmjs.org/pify
+[0m[91mnpm http [0m[91mfetch 200 https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.4.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm[0m[91m http fetch[0m[91m GET https://registry.npmjs.org/strip-bom/-/strip-bom-2.0.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm [0m[91mhttp fetch GET https://registry.npmjs.org/parse-json/-/parse-json-2.2.0.tgz
+[0m[91mnpm info[0m[91m retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm[0m[91m http[0m[91m fetch GET https://registry.npmjs.org/pify/-/pify-2.3.0.tgz
+[0m[91mnpm [0m[91mhttp[0m[91m fetch[0m[91m 200 https://registry.npmjs.org/pify/-/pify-2.3.0.tgz
+[0m[91mnpm[0m[91m http [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/strip-bom/-/strip-bom-2.0.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/parse-json/-/parse-json-2.2.0.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/error-ex
+[0m[91mnpm http 200 https://registry.npmjs.org/error-ex
+[0m[91mnpm info retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/error-ex/-/error-ex-1.3.0.tgz
+[0m[91mnpm[0m[91m http fetch[0m[91m 200 https://registry.npmjs.org/error-ex/-/error-ex-1.3.0.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/is-arrayish
+[0m[91mnpm http 200 https://registry.npmjs.org/is-arrayish
+[0m[91mnpm[0m[91m info retry fetch attempt 1 at 6:47:20 AM
+[0m[91mnpm[0m[91m info [0m[91mattempt registry request try #1 at 6:47:20 AM
+[0m[91mnpm [0m[91mhttp fetch GET https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz
+[0m[91mnpm info attempt[0m[91m registry request try #1 at 6:47:21 AM
+npm http request GET https://registry.npmjs.org/is-utf8
+[0m[91mnpm http 200 https://registry.npmjs.org/is-utf8
+[0m[91mnpm info retry fetch attempt 1 at 6:47:21 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:21 AM
+npm http[0m[91m fetch GET https://registry.npmjs.org/is-utf8/-/is-utf8-0.2.1.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/is-utf8/-/is-utf8-0.2.1.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:21 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/indent-string
+[0m[91mnpm info attempt registry request try #1 at 6:47:21 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/strip-indent
+[0m[91mnpm http 200 https://registry.npmjs.org/indent-string
+[0m[91mnpm http 200 https://registry.npmjs.org/strip-indent
+[0m[91mnpm info retry fetch attempt 1 at 6:47:21 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:21 AM
+[0m[91mnpm http[0m[91m fetch GET https://registry.npmjs.org/indent-string/-/indent-string-2.1.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:21 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:21 AM
+npm http fetch GET https://registry.npmjs.org/strip-indent/-/strip-indent-1.0.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/indent-string/-/indent-string-2.1.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/strip-indent/-/strip-indent-1.0.1.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:21 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/repeating
+[0m[91mnpm http[0m[91m 200 https://registry.npmjs.org/repeating
+[0m[91mnpm info retry fetch attempt 1 at 6:47:21 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:21 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/repeating/-/repeating-2.0.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/repeating/-/repeating-2.0.1.tgz
+[0m[91mnpm[0m[91m info attempt registry request try #1 at 6:47:21 AM
+npm http request GET https://registry.npmjs.org/is-finite
+[0m[91mnpm [0m[91mhttp 200 https://registry.npmjs.org/is-finite
+[0m[91mnpm [0m[91minfo retry fetch attempt 1 at 6:47:21 AM
+npm info attempt registry request try #1 at 6:47:21 AM
+npm http fetch GET https://registry.npmjs.org/is-finite/-/is-finite-1.0.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/is-finite/-/is-finite-1.0.1.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:21 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/number-is-nan
+[0m[91mnpm http 200 https://registry.npmjs.org/number-is-nan
+[0m[91mnpm [0m[91minfo retry fetch attempt 1 at 6:47:21 AM
+[0m[91mnpm info [0m[91mattempt registry request try #1 at 6:47:21 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/number-is-nan/-/number-is-nan-1.0.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/number-is-nan/-/number-is-nan-1.0.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:21 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:21 AM
+[0m[91mnpm [0m[91mhttp fetch GET https://registry.npmjs.org/glob/-/glob-5.0.15.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/glob/-/glob-5.0.15.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:21 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/inflight
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:21 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/once
+[0m[91mnpm http 200 https://registry.npmjs.org/once
+[0m[91mnpm [0m[91mhttp 200 https://registry.npmjs.org/inflight
+[0m[91mnpm info retry fetch attempt 1 at 6:47:21 AM
+npm info attempt registry request try #1 at 6:47:21 AM
+npm http fetch GET https://registry.npmjs.org/once/-/once-1.3.3.tgz
+[0m[91mnpm[0m[91m info retry fetch attempt 1 at 6:47:21 AM
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:21 AM
+npm http fetch GET https://registry.npmjs.org/inflight/-/inflight-1.0.5.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/inflight/-/inflight-1.0.5.tgz
+[0m[91mnpm [0m[91mhttp fetch 200 https://registry.npmjs.org/once/-/once-1.3.3.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:21 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/wrappy
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/wrappy
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/brace-expansion
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/brace-expansion
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.4.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.4.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/balanced-match
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/concat-map
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/balanced-match
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/concat-map
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.1.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.1.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/resolve
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/resolve
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/resolve/-/resolve-1.1.7.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/resolve/-/resolve-1.1.7.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/abbrev
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/abbrev
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/abbrev/-/abbrev-1.0.7.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/abbrev/-/abbrev-1.0.7.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/colors
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/grunt-legacy-log-utils
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/hooker
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/underscore.string
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/grunt-legacy-log-utils
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/hooker
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/colors
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/grunt-legacy-log-utils/-/grunt-legacy-log-utils-1.0.0.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/hooker/-/hooker-0.2.3.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/colors/-/colors-1.1.2.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/underscore.string
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/underscore.string/-/underscore.string-3.2.3.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/grunt-legacy-log-utils/-/grunt-legacy-log-utils-1.0.0.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/hooker/-/hooker-0.2.3.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/colors/-/colors-1.1.2.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/underscore.string/-/underscore.string-3.2.3.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/chalk
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/lodash/-/lodash-4.3.0.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/chalk
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/lodash/-/lodash-4.3.0.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:22 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp fetch 200 https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm[0m[91m http request GET https://registry.npmjs.org/ansi-styles
+[0m[91mnpm info[0m[91m [0m[91mattempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http request[0m[91m GET https://registry.npmjs.org/has-ansi
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm[0m[91m http request GET https://registry.npmjs.org/strip-ansi
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/supports-color
+[0m[91mnpm info retry fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+npm [0m[91mhttp fetch GET https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz
+[0m[91mnpm http 200 https://registry.npmjs.org/ansi-styles
+[0m[91mnpm http 304 https://registry.npmjs.org/supports-color
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz
+[0m[91mnpm http 200 https://registry.npmjs.org/has-ansi
+[0m[91mnpm http [0m[91m200 https://registry.npmjs.org/strip-ansi
+[0m[91mnpm info retry[0m[91m fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm info [0m[91mattempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http [0m[91mfetch GET https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.1.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http fetch[0m[91m GET https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz
+[0m[91mnpm info [0m[91mretry fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http [0m[91mfetch GET https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz
+[0m[91mnpm [0m[91mhttp fetch 200 https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz
+[0m[91mnpm http [0m[91mfetch 200 https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/ansi-regex
+[0m[91mnpm http 200 https://registry.npmjs.org/ansi-regex
+[0m[91mnpm info[0m[91m retry fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.0.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.0.0.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/async
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm[0m[91m http request GET https://registry.npmjs.org/getobject
+[0m[91mnpm[0m[91m info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/which
+[0m[91mnpm http 200 https://registry.npmjs.org/getobject
+[0m[91mnpm http 200 https://registry.npmjs.org/which
+[0m[91mnpm info retry fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm[0m[91m http fetch GET https://registry.npmjs.org/getobject/-/getobject-0.1.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm [0m[91mhttp fetch GET https://registry.npmjs.org/which/-/which-1.2.9.tgz
+[0m[91mnpm http 200 https://registry.npmjs.org/async
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/getobject/-/getobject-0.1.0.tgz
+[0m[91mnpm http[0m[91m fetch 200 https://registry.npmjs.org/which/-/which-1.2.9.tgz
+[0m[91mnpm[0m[91m info retry fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm[0m[91m info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http[0m[91m fetch GET https://registry.npmjs.org/async/-/async-1.5.2.tgz
+[0m[91mnpm[0m[91m http fetch 200 https://registry.npmjs.org/async/-/async-1.5.2.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/isexe
+[0m[91mnpm http[0m[91m 200[0m[91m https://registry.npmjs.org/isexe
+[0m[91mnpm[0m[91m info retry fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/isexe/-/isexe-1.1.2.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/isexe/-/isexe-1.1.2.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http request[0m[91m GET https://registry.npmjs.org/argparse
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mattempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http [0m[91mrequest GET https://registry.npmjs.org/esprima
+[0m[91mnpm http 200 https://registry.npmjs.org/argparse
+[0m[91mnpm http 200 https://registry.npmjs.org/esprima
+[0m[91mnpm info [0m[91mretry fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm info[0m[91m attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm [0m[91mhttp fetch GET https://registry.npmjs.org/argparse/-/argparse-1.0.7.tgz
+[0m[91mnpm[0m[91m info retry fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm [0m[91mhttp[0m[91m fetch[0m[91m GET https://registry.npmjs.org/esprima/-/esprima-2.7.2.tgz
+[0m[91mnpm http [0m[91mfetch 200 https://registry.npmjs.org/argparse/-/argparse-1.0.7.tgz
+[0m[91mnpm[0m[91m http fetch 200 https://registry.npmjs.org/esprima/-/esprima-2.7.2.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:23 AM
+npm http request GET https://registry.npmjs.org/sprintf-js
+[0m[91mnpm[0m[91m http 200 https://registry.npmjs.org/sprintf-js
+[0m[91mnpm info retry[0m[91m fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm[0m[91m info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm [0m[91mhttp fetch GET https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz
+[0m[91mnpm [0m[91mhttp fetch 200 https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz
+[0m[91mnpm[0m[91m info [0m[91mretry fetch attempt 1 at 6:47:23 AM
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/rimraf/-/rimraf-2.5.2.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/rimraf/-/rimraf-2.5.2.tgz
+[0m[91mnpm info attempt[0m[91m registry request try #1 at 6:47:23 AM
+npm http request GET https://registry.npmjs.org/uri-path
+[0m[91mnpm [0m[91minfo retry fetch attempt 1 at 6:47:23 AM
+npm info attempt registry request try #1 at 6:47:23 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/chalk/-/chalk-1.0.0.tgz
+[0m[91mnpm [0m[91mhttp 200 https://registry.npmjs.org/uri-path
+[0m[91mnpm http fetch[0m[91m 200 https://registry.npmjs.org/chalk/-/chalk-1.0.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:23 AM
+npm info attempt registry request try #1 at 6:47:23 AM
+npm http fetch GET https://registry.npmjs.org/uri-path/-/uri-path-1.0.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/uri-path/-/uri-path-1.0.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:24 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+npm http fetch GET https://registry.npmjs.org/has-ansi/-/has-ansi-1.0.3.tgz
+[0m[91mnpm[0m[91m info retry fetch attempt 1 at 6:47:24 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+npm http [0m[91mfetch GET https://registry.npmjs.org/strip-ansi/-/strip-ansi-2.0.1.tgz
+[0m[91mnpm info [0m[91mretry fetch attempt 1 at 6:47:24 AM
+npm info[0m[91m attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/supports-color/-/supports-color-1.3.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/has-ansi/-/has-ansi-1.0.3.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/strip-ansi/-/strip-ansi-2.0.1.tgz
+[0m[91mnpm http fetch[0m[91m 200 https://registry.npmjs.org/supports-color/-/supports-color-1.3.1.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:24 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+npm http fetch GET https://registry.npmjs.org/ansi-regex/-/ansi-regex-1.1.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/ansi-regex/-/ansi-regex-1.1.1.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/gaze
+[0m[91mnpm[0m[91m info attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/tiny-lr
+[0m[91mnpm http 200 https://registry.npmjs.org/gaze
+[0m[91mnpm [0m[91mhttp 200 https://registry.npmjs.org/tiny-lr
+[0m[91mnpm info retry[0m[91m fetch attempt 1 at 6:47:24 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/gaze/-/gaze-1.0.0.tgz
+[0m[91mnpm info retry[0m[91m fetch attempt 1 at 6:47:24 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/tiny-lr/-/tiny-lr-0.2.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/gaze/-/gaze-1.0.0.tgz
+[0m[91mnpm http fetch[0m[91m 200 https://registry.npmjs.org/tiny-lr/-/tiny-lr-0.2.1.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/globule
+[0m[91mnpm http 200 https://registry.npmjs.org/globule
+[0m[91mnpm info [0m[91mretry fetch attempt 1 at 6:47:24 AM
+npm info attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/globule/-/globule-0.2.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/globule/-/globule-0.2.0.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/glob
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:24 AM
+npm http request GET https://registry.npmjs.org/minimatch
+[0m[91mnpm info retry[0m[91m fetch attempt 1 at 6:47:24 AM
+npm info attempt registry request try #1 at 6:47:24 AM
+npm http fetch GET https://registry.npmjs.org/lodash/-/lodash-2.4.2.tgz
+[0m[91mnpm http 304 https://registry.npmjs.org/glob
+[0m[91mnpm http [0m[91mfetch 200 https://registry.npmjs.org/lodash/-/lodash-2.4.2.tgz
+[0m[91mnpm http 304 https://registry.npmjs.org/minimatch
+[0m[91mnpm info retry fetch attempt 1 at 6:47:24 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+npm http fetch GET https://registry.npmjs.org/glob/-/glob-3.2.11.tgz
+[0m[91mnpm http [0m[91mfetch 200 https://registry.npmjs.org/glob/-/glob-3.2.11.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:24 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+npm http fetch GET https://registry.npmjs.org/minimatch/-/minimatch-0.3.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/minimatch/-/minimatch-0.3.0.tgz
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/lru-cache
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:24 AM
+npm [0m[91mhttp request GET https://registry.npmjs.org/sigmund
+[0m[91mnpm http 304 https://registry.npmjs.org/lru-cache
+[0m[91mnpm [0m[91mhttp 304 https://registry.npmjs.org/sigmund
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/body-parser
+[0m[91mnpm info attempt[0m[91m registry request try #1 at 6:47:24 AM
+npm http request GET https://registry.npmjs.org/faye-websocket
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/livereload-js
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/parseurl
+[0m[91mnpm info attempt[0m[91m registry request try #1 at 6:47:24 AM
+npm http request GET https://registry.npmjs.org/qs
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:24 AM
+npm http request GET https://registry.npmjs.org/debug
+[0m[91mnpm http 200 https://registry.npmjs.org/body-parser
+[0m[91mnpm [0m[91mhttp 304 https://registry.npmjs.org/debug
+[0m[91mnpm http 200 https://registry.npmjs.org/parseurl
+[0m[91mnpm http 200 https://registry.npmjs.org/livereload-js
+[0m[91mnpm [0m[91mhttp 200 https://registry.npmjs.org/faye-websocket
+[0m[91mnpm http 200 https://registry.npmjs.org/qs
+[0m[91mnpm info retry fetch attempt 1 at 6:47:24 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+npm http fetch GET https://registry.npmjs.org/body-parser/-/body-parser-1.14.2.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:24 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/parseurl/-/parseurl-1.3.1.tgz
+[0m[91mnpm [0m[91minfo retry fetch attempt 1 at 6:47:24 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/livereload-js/-/livereload-js-2.2.2.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:24 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/faye-websocket/-/faye-websocket-0.10.0.tgz
+[0m[91mnpm info retry fetch attempt 1 at 6:47:24 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:24 AM
+[0m[91mnpm http fetch GET https://registry.npmjs.org/qs/-/qs-5.1.0.tgz
+[0m[91mnpm [0m[91mhttp fetch 200 https://registry.npmjs.org/body-parser/-/body-parser-1.14.2.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/parseurl/-/parseurl-1.3.1.tgz
+[0m[91mnpm[0m[91m http [0m[91mfetch 200 https://registry.npmjs.org/livereload-js/-/livereload-js-2.2.2.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/faye-websocket/-/faye-websocket-0.10.0.tgz
+[0m[91mnpm[0m[91m http[0m[91m [0m[91mfetch 200 https://registry.npmjs.org/qs/-/qs-5.1.0.tgz
+[0m[91mnpm [0m[91minfo attempt[0m[91m registry request try #1 at 6:47:25 AM
+[0m[91mnpm http[0m[91m request[0m[91m GET https://registry.npmjs.org/bytes
+[0m[91mnpm [0m[91minfo [0m[91mattempt[0m[91m registry request try #1 at 6:47:25 AM
+[0m[91mnpm [0m[91mhttp request[0m[91m GET https://registry.npmjs.org/content-type
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:25 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/depd
+[0m[91mnpm [0m[91minfo[0m[91m attempt[0m[91m registry request try #1 at 6:47:25 AM
+[0m[91mnpm [0m[91mhttp [0m[91mrequest GET https://registry.npmjs.org/http-errors
+[0m[91mnpm [0m[91minfo [0m[91mattempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm [0m[91mhttp [0m[91mrequest GET https://registry.npmjs.org/on-finished
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:25 AM
+[0m[91mnpm http request[0m[91m GET https://registry.npmjs.org/raw-body
+[0m[91mnpm [0m[91minfo[0m[91m attempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm http[0m[91m request[0m[91m GET https://registry.npmjs.org/type-is
+[0m[91mnpm [0m[91minfo retry fetch attempt 1 at 6:47:25 AM
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm http[0m[91m fetch[0m[91m GET https://registry.npmjs.org/qs/-/qs-5.2.0.tgz
+[0m[91mnpm http[0m[91m 200[0m[91m https://registry.npmjs.org/bytes
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/qs/-/qs-5.2.0.tgz
+npm http 200 https://registry.npmjs.org/on-finished
+[0m[91mnpm http 200 https://registry.npmjs.org/content-type
+npm http 200 https://registry.npmjs.org/http-errors
+[0m[91mnpm [0m[91mhttp 200[0m[91m https://registry.npmjs.org/depd
+[0m[91mnpm[0m[91m http[0m[91m [0m[91m200 https://registry.npmjs.org/type-is
+[0m[91mnpm [0m[91mhttp [0m[91m200 https://registry.npmjs.org/raw-body
+[0m[91mnpm info retry fetch attempt 1 at 6:47:25 AM
+npm info attempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm[0m[91m http fetch GET https://registry.npmjs.org/bytes/-/bytes-2.2.0.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/bytes/-/bytes-2.2.0.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:25 AM
+[0m[91mnpm[0m[91m info[0m[91m attempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm[0m[91m http[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/on-finished/-/on-finished-2.3.0.tgz
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mretry fetch attempt 1 at 6:47:25 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m attempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm [0m[91mhttp [0m[91mfetch GET https://registry.npmjs.org/content-type/-/content-type-1.0.2.tgz
+[0m[91mnpm [0m[91minfo [0m[91mretry[0m[91m fetch attempt 1 at 6:47:25 AM
+[0m[91mnpm[0m[91m info[0m[91m attempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm[0m[91m http[0m[91m fetch[0m[91m GET https://registry.npmjs.org/http-errors/-/http-errors-1.3.1.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry fetch attempt 1 at 6:47:25 AM
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mattempt[0m[91m registry request try #1 at 6:47:25 AM
+[0m[91mnpm[0m[91m http [0m[91mfetch GET https://registry.npmjs.org/depd/-/depd-1.1.0.tgz
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mretry[0m[91m fetch attempt 1 at 6:47:25 AM
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mattempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm [0m[91mhttp fetch[0m[91m GET https://registry.npmjs.org/type-is/-/type-is-1.6.13.tgz
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:25 AM
+[0m[91mnpm[0m[91m info [0m[91mattempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm[0m[91m http[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/raw-body/-/raw-body-2.1.6.tgz
+[0m[91mnpm http[0m[91m fetch 200 https://registry.npmjs.org/content-type/-/content-type-1.0.2.tgz
+[0m[91mnpm http[0m[91m fetch[0m[91m 200 https://registry.npmjs.org/on-finished/-/on-finished-2.3.0.tgz
+[0m[91mnpm[0m[91m http [0m[91mfetch 200 https://registry.npmjs.org/http-errors/-/http-errors-1.3.1.tgz
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/depd/-/depd-1.1.0.tgz
+[0m[91mnpm http[0m[91m fetch 200 https://registry.npmjs.org/raw-body/-/raw-body-2.1.6.tgz
+[0m[91mnpm [0m[91mhttp fetch 200 https://registry.npmjs.org/type-is/-/type-is-1.6.13.tgz
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm [0m[91mhttp [0m[91mrequest[0m[91m GET https://registry.npmjs.org/ms
+[0m[91mnpm http[0m[91m 304 https://registry.npmjs.org/ms
+[0m[91mnpm info attempt registry request try #1 at 6:47:25 AM
+npm http request GET https://registry.npmjs.org/statuses
+[0m[91mnpm http[0m[91m 200 https://registry.npmjs.org/statuses
+[0m[91mnpm [0m[91minfo retry[0m[91m fetch attempt 1 at 6:47:25 AM
+[0m[91mnpm[0m[91m info [0m[91mattempt[0m[91m registry request try #1 at 6:47:25 AM
+[0m[91mnpm[0m[91m http [0m[91mfetch[0m[91m GET https://registry.npmjs.org/statuses/-/statuses-1.3.0.tgz
+[0m[91mnpm [0m[91mhttp fetch 200 https://registry.npmjs.org/statuses/-/statuses-1.3.0.tgz
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm http [0m[91mrequest GET https://registry.npmjs.org/ee-first
+[0m[91mnpm [0m[91mhttp 200 https://registry.npmjs.org/ee-first
+[0m[91mnpm [0m[91minfo retry fetch attempt 1 at 6:47:25 AM
+[0m[91mnpm info [0m[91mattempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm [0m[91mhttp fetch[0m[91m GET https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz
+[0m[91mnpm [0m[91mhttp fetch[0m[91m 200 https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:25 AM
+npm http request GET https://registry.npmjs.org/unpipe
+[0m[91mnpm info[0m[91m retry fetch attempt 1 at 6:47:25 AM
+[0m[91mnpm[0m[91m info [0m[91mattempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm[0m[91m http[0m[91m fetch GET https://registry.npmjs.org/bytes/-/bytes-2.3.0.tgz
+[0m[91mnpm http 200[0m[91m https://registry.npmjs.org/unpipe
+[0m[91mnpm http fetch 200 https://registry.npmjs.org/bytes/-/bytes-2.3.0.tgz
+[0m[91mnpm [0m[91minfo retry fetch attempt 1 at 6:47:25 AM
+[0m[91mnpm info attempt registry request try #1 at 6:47:25 AM
+npm http[0m[91m fetch GET https://registry.npmjs.org/unpipe/-/unpipe-1.0.0.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/unpipe/-/unpipe-1.0.0.tgz
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:25 AM
+[0m[91mnpm http request GET https://registry.npmjs.org/media-typer
+[0m[91mnpm[0m[91m info [0m[91mattempt[0m[91m registry request try #1 at 6:47:25 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m request GET https://registry.npmjs.org/mime-types
+[0m[91mnpm [0m[91mhttp 200 https://registry.npmjs.org/media-typer
+[0m[91mnpm [0m[91mhttp 200 https://registry.npmjs.org/mime-types
+[0m[91mnpm [0m[91minfo retry[0m[91m fetch attempt 1 at 6:47:25 AM
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m attempt registry request try #1 at 6:47:25 AM
+[0m[91mnpm[0m[91m http fetch[0m[91m GET https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz
+[0m[91mnpm [0m[91minfo [0m[91mretry fetch attempt 1 at 6:47:25 AM
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:25 AM
+npm[0m[91m http[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/mime-types/-/mime-types-2.1.11.tgz
+[0m[91mnpm[0m[91m http fetch[0m[91m 200 https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m fetch[0m[91m 200 https://registry.npmjs.org/mime-types/-/mime-types-2.1.11.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:25 AM
+npm http request GET https://registry.npmjs.org/mime-db
+[0m[91mnpm [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/mime-db
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m retry[0m[91m fetch attempt 1 at 6:47:25 AM
+npm info attempt registry request try #1 at 6:47:25 AM
+npm http[0m[91m fetch[0m[91m GET https://registry.npmjs.org/mime-db/-/mime-db-1.23.0.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/mime-db/-/mime-db-1.23.0.tgz
+[0m[91mnpm info attempt registry request try #1 at 6:47:26 AM
+npm http request GET https://registry.npmjs.org/websocket-driver
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91m200[0m[91m https://registry.npmjs.org/websocket-driver
+[0m[91mnpm [0m[91minfo [0m[91mretry[0m[91m fetch attempt 1 at 6:47:26 AM
+[0m[91mnpm[0m[91m info[0m[91m attempt registry request try #1 at 6:47:26 AM
+[0m[91mnpm[0m[91m http [0m[91mfetch[0m[91m GET https://registry.npmjs.org/websocket-driver/-/websocket-driver-0.6.4.tgz
+[0m[91mnpm http[0m[91m [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/websocket-driver/-/websocket-driver-0.6.4.tgz
+[0m[91mnpm [0m[91minfo[0m[91m attempt[0m[91m registry request try #1 at 6:47:26 AM
+[0m[91mnpm[0m[91m http[0m[91m [0m[91mrequest GET https://registry.npmjs.org/websocket-extensions
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m200[0m[91m https://registry.npmjs.org/websocket-extensions
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mretry[0m[91m fetch attempt 1 at 6:47:26 AM
+[0m[91mnpm [0m[91minfo [0m[91mattempt[0m[91m registry request try #1 at 6:47:26 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch[0m[91m GET https://registry.npmjs.org/websocket-extensions/-/websocket-extensions-0.1.1.tgz
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mfetch 200 https://registry.npmjs.org/websocket-extensions/-/websocket-extensions-0.1.1.tgz
+[0m[91mnpm[0m[91m info[0m[91m attempt registry request try #1 at 6:47:26 AM
+[0m[91mnpm[0m[91m http[0m[91m request[0m[91m GET https://registry.npmjs.org/mocha
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91m304[0m[91m https://registry.npmjs.org/mocha
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt registry request try #1 at 6:47:26 AM
+[0m[91mnpm[0m[91m http[0m[91m request[0m[91m GET https://registry.npmjs.org/commander
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m attempt[0m[91m registry request try #1 at 6:47:26 AM
+[0m[91mnpm [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/diff
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mattempt registry request try #1 at 6:47:26 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/growl
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mattempt registry request try #1 at 6:47:26 AM
+[0m[91mnpm [0m[91mhttp[0m[91m request[0m[91m GET https://registry.npmjs.org/jade
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:26 AM
+[0m[91mnpm [0m[91mhttp[0m[91m request[0m[91m GET https://registry.npmjs.org/mkdirp
+[0m[91mnpm[0m[91m info[0m[91m attempt registry request try #1 at 6:47:26 AM
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m [0m[91mrequest[0m[91m GET https://registry.npmjs.org/escape-string-regexp
+[0m[91mnpm[0m[91m http[0m[91m 304[0m[91m https://registry.npmjs.org/commander
+[0m[91mnpm[0m[91m http [0m[91m304[0m[91m https://registry.npmjs.org/escape-string-regexp
+[0m[91mnpm [0m[91mhttp[0m[91m 304[0m[91m https://registry.npmjs.org/jade
+[0m[91mnpm[0m[91m [0m[91mhttp [0m[91m304 https://registry.npmjs.org/mkdirp
+[0m[91mnpm[0m[91m [0m[91mhttp[0m[91m 304[0m[91m https://registry.npmjs.org/growl
+[0m[91mnpm[0m[91m http[0m[91m [0m[91m304[0m[91m https://registry.npmjs.org/diff
+[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated jade@0.26.3: Jade has been renamed to pug, please install the latest version of pug instead of jade
+[0m[91mnpm [0m[91minfo[0m[91m attempt registry request try #1 at 6:47:26 AM
+[0m[91mnpm http request[0m[91m GET https://registry.npmjs.org/graceful-fs
+[0m[91mnpm[0m[91m http[0m[91m [0m[91m304[0m[91m https://registry.npmjs.org/graceful-fs
+[0m[91mnpm[0m[91m [0m[91mWARN deprecated[0m[91m graceful-fs@2.0.3: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:26 AM
+[0m[91mnpm [0m[91mhttp request GET https://registry.npmjs.org/minimist
+[0m[91mnpm[0m[91m http [0m[91m304 https://registry.npmjs.org/minimist
+[0m[91mnpm [0m[91minfo [0m[91mattempt[0m[91m registry request try #1 at 6:47:26 AM
+[0m[91mnpm[0m[91m http [0m[91mrequest GET https://registry.npmjs.org/should-equal
+[0m[91mnpm [0m[91minfo attempt registry request try #1 at 6:47:26 AM
+[0m[91mnpm[0m[91m [0m[91mhttp request[0m[91m GET https://registry.npmjs.org/should-format
+[0m[91mnpm [0m[91minfo attempt[0m[91m registry request try #1 at 6:47:26 AM
+npm[0m[91m http [0m[91mrequest GET https://registry.npmjs.org/should-type
+[0m[91mnpm [0m[91mhttp [0m[91m200 https://registry.npmjs.org/should-equal
+[0m[91mnpm[0m[91m http[0m[91m 200[0m[91m https://registry.npmjs.org/should-format
+[0m[91mnpm[0m[91m http 200 https://registry.npmjs.org/should-type
+[0m[91mnpm[0m[91m [0m[91minfo retry[0m[91m fetch attempt 1 at 6:47:27 AM
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mattempt registry request try #1 at 6:47:27 AM
+[0m[91mnpm [0m[91mhttp [0m[91mfetch GET https://registry.npmjs.org/should-equal/-/should-equal-0.7.3.tgz
+[0m[91mnpm[0m[91m info[0m[91m retry[0m[91m fetch attempt 1 at 6:47:27 AM
+[0m[91mnpm [0m[91minfo [0m[91mattempt registry request try #1 at 6:47:27 AM
+[0m[91mnpm [0m[91mhttp[0m[91m [0m[91mfetch GET https://registry.npmjs.org/should-format/-/should-format-0.3.2.tgz
+[0m[91mnpm[0m[91m info [0m[91mretry fetch attempt 1 at 6:47:27 AM
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mattempt[0m[91m registry request try #1 at 6:47:27 AM
+[0m[91mnpm [0m[91mhttp fetch[0m[91m GET https://registry.npmjs.org/should-type/-/should-type-0.2.0.tgz
+[0m[91mnpm[0m[91m http fetch 200 https://registry.npmjs.org/should-equal/-/should-equal-0.7.3.tgz
+[0m[91mnpm[0m[91m http [0m[91mfetch[0m[91m 200 https://registry.npmjs.org/should-format/-/should-format-0.3.2.tgz
+[0m[91mnpm[0m[91m http fetch 200 https://registry.npmjs.org/should-type/-/should-type-0.2.0.tgz
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle abbrev@1.0.7~preinstall: abbrev@1.0.7
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m ansi-regex@2.0.0~preinstall: ansi-regex@2.0.0
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m ansi-styles@2.2.1~preinstall: ansi-styles@2.2.1
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle array-find-index@1.0.1~preinstall: array-find-index@1.0.1
+[0m[91mnpm info [0m[91mlifecycle async@1.5.2~preinstall: async@1.5.2
+[0m[91mnpm [0m[91minfo lifecycle balanced-match@0.4.1~preinstall: balanced-match@0.4.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle qs@5.2.0~preinstall: qs@5.2.0
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle builtin-modules@1.1.1~preinstall: builtin-modules@1.1.1
+[0m[91mnpm info [0m[91mlifecycle bytes@2.2.0~preinstall: bytes@2.2.0
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m camelcase@2.1.1~preinstall: camelcase@2.1.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle coffee-script@1.10.0~preinstall: coffee-script@1.10.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle[0m[91m colors@1.1.2~preinstall: colors@1.1.2
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle commander@2.3.0~preinstall: commander@2.3.0
+[0m[91mnpm[0m[91m info lifecycle[0m[91m concat-map@0.0.1~preinstall: concat-map@0.0.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m brace-expansion@1.1.4~preinstall: brace-expansion@1.1.4
+npm[0m[91m info lifecycle[0m[91m content-type@1.0.2~preinstall: content-type@1.0.2
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m decamelize@1.2.0~preinstall: decamelize@1.2.0
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle depd@1.1.0~preinstall: depd@1.1.0
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m diff@1.4.0~preinstall: diff@1.4.0
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m ee-first@1.1.1~preinstall: ee-first@1.1.1
+[0m[91mnpm info[0m[91m [0m[91mlifecycle[0m[91m escape-string-regexp@1.0.5~preinstall: escape-string-regexp@1.0.5
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m esprima@2.7.2~preinstall: esprima@2.7.2
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m eventemitter2@0.4.14~preinstall: eventemitter2@0.4.14
+[0m[91mnpm info[0m[91m [0m[91mlifecycle[0m[91m exit@0.1.2~preinstall: exit@0.1.2
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m get-stdin@4.0.1~preinstall: get-stdin@4.0.1
+[0m[91mnpm[0m[91m info[0m[91m lifecycle getobject@0.1.0~preinstall: getobject@0.1.0
+[0m[91mnpm[0m[91m info [0m[91mlifecycle lodash@2.4.2~preinstall: lodash@2.4.2
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle graceful-fs@4.1.4~preinstall: graceful-fs@4.1.4
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle growl@1.8.1~preinstall: growl@1.8.1
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m ansi-regex@1.1.1~preinstall: ansi-regex@1.1.1
+[0m[91mnpm[0m[91m info[0m[91m lifecycle has-ansi@1.0.3~preinstall: has-ansi@1.0.3
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m lodash@4.3.0~preinstall: lodash@4.3.0
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle strip-ansi@2.0.1~preinstall: strip-ansi@2.0.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle[0m[91m supports-color@1.3.1~preinstall: supports-color@1.3.1
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle[0m[91m chalk@1.0.0~preinstall: chalk@1.0.0
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m lodash@3.10.1~preinstall: lodash@3.10.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle grunt-include-replace@4.0.1~preinstall: grunt-include-replace@4.0.1
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle grunt-known-options@1.1.0~preinstall: grunt-known-options@1.1.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m lodash@4.3.0~preinstall: lodash@4.3.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle[0m[91m lodash@3.10.1~preinstall: lodash@3.10.1
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m lodash@4.3.0~preinstall: lodash@4.3.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle[0m[91m has-ansi@2.0.0~preinstall: has-ansi@2.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m hooker@0.2.3~preinstall: hooker@0.2.3
+[0m[91mnpm info[0m[91m [0m[91mlifecycle[0m[91m hosted-git-info@2.1.5~preinstall: hosted-git-info@2.1.5
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle iconv-lite@0.4.13~preinstall: iconv-lite@0.4.13
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle[0m[91m inherits@2.0.1~preinstall: inherits@2.0.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle is-arrayish@0.2.1~preinstall: is-arrayish@0.2.1
+npm info[0m[91m lifecycle[0m[91m error-ex@1.3.0~preinstall: error-ex@1.3.0
+npm[0m[91m [0m[91minfo lifecycle[0m[91m is-builtin-module@1.0.0~preinstall: is-builtin-module@1.0.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle is-utf8@0.2.1~preinstall: is-utf8@0.2.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m isexe@1.1.2~preinstall: isexe@1.1.2
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m commander@0.6.1~preinstall: commander@0.6.1
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m mkdirp@0.3.0~preinstall: mkdirp@0.3.0
+npm [0m[91minfo [0m[91mlifecycle jade@0.26.3~preinstall: jade@0.26.3
+[0m[91mnpm[0m[91m [0m[91minfo lifecycle[0m[91m livereload-js@2.2.2~preinstall: livereload-js@2.2.2
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle lodash@4.12.0~preinstall: lodash@4.12.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle[0m[91m lru-cache@2.7.3~preinstall: lru-cache@2.7.3
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle[0m[91m map-obj@1.0.1~preinstall: map-obj@1.0.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle camelcase-keys@2.1.0~preinstall: camelcase-keys@2.1.0
+npm [0m[91minfo lifecycle[0m[91m media-typer@0.3.0~preinstall: media-typer@0.3.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle[0m[91m mime-db@1.23.0~preinstall: mime-db@1.23.0
+[0m[91mnpm[0m[91m [0m[91minfo lifecycle[0m[91m mime-types@2.1.11~preinstall: mime-types@2.1.11
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle minimatch@3.0.0~preinstall: minimatch@3.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle minimist@1.2.0~preinstall: minimist@1.2.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m minimist@0.0.8~preinstall: minimist@0.0.8
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle mkdirp@0.5.1~preinstall: mkdirp@0.5.1
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle escape-string-regexp@1.0.2~preinstall: escape-string-regexp@1.0.2
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle graceful-fs@2.0.3~preinstall: graceful-fs@2.0.3
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle supports-color@1.2.0~preinstall: supports-color@1.2.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle ms@0.7.1~preinstall: ms@0.7.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle debug@2.2.0~preinstall: debug@2.2.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle nopt@3.0.6~preinstall: nopt@3.0.6
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m number-is-nan@1.0.0~preinstall: number-is-nan@1.0.0
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle is-finite@1.0.1~preinstall: is-finite@1.0.1
+[0m[91mnpm[0m[91m [0m[91minfo lifecycle object-assign@4.1.0~preinstall: object-assign@4.1.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle on-finished@2.3.0~preinstall: on-finished@2.3.0
+[0m[91mnpm info[0m[91m [0m[91mlifecycle parse-json@2.2.0~preinstall: parse-json@2.2.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle[0m[91m parseurl@1.3.1~preinstall: parseurl@1.3.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m path-is-absolute@1.0.0~preinstall: path-is-absolute@1.0.0
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m pify@2.3.0~preinstall: pify@2.3.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle[0m[91m pinkie@2.0.4~preinstall: pinkie@2.0.4
+[0m[91mnpm info lifecycle[0m[91m pinkie-promise@2.0.1~preinstall: pinkie-promise@2.0.1
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle[0m[91m path-type@1.1.0~preinstall: path-type@1.1.0
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m path-exists@2.1.0~preinstall: path-exists@2.1.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle find-up@1.1.2~preinstall: find-up@1.1.2
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle qs@5.1.0~preinstall: qs@5.1.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle bytes@2.3.0~preinstall: bytes@2.3.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle repeating@2.0.1~preinstall: repeating@2.0.1
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m indent-string@2.1.0~preinstall: indent-string@2.1.0
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m resolve@1.1.7~preinstall: resolve@1.1.7
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle rimraf@2.2.8~preinstall: rimraf@2.2.8
+[0m[91mnpm [0m[91minfo lifecycle semver@5.1.0~preinstall: semver@5.1.0
+[0m[91mnpm info [0m[91mlifecycle[0m[91m should-type@0.2.0~preinstall: should-type@0.2.0
+[0m[91mnpm info lifecycle[0m[91m should-format@0.3.2~preinstall: should-format@0.3.2
+[0m[91mnpm[0m[91m info[0m[91m lifecycle should-equal@0.7.3~preinstall: should-equal@0.7.3
+[0m[91mnpm info[0m[91m [0m[91mlifecycle should@8.3.2~preinstall: should@8.3.2
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle sigmund@1.0.1~preinstall: sigmund@1.0.1
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m minimatch@0.2.14~preinstall: minimatch@0.2.14
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle glob@3.2.3~preinstall: glob@3.2.3
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m mocha@2.4.5~preinstall: mocha@2.4.5
+[0m[91mnpm [0m[91minfo lifecycle grunt-mocha-cli@2.1.0~preinstall: grunt-mocha-cli@2.1.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle[0m[91m minimatch@0.2.14~preinstall: minimatch@0.2.14
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m minimatch@0.3.0~preinstall: minimatch@0.3.0
+[0m[91mnpm info [0m[91mlifecycle glob@3.2.11~preinstall: glob@3.2.11
+[0m[91mnpm info[0m[91m [0m[91mlifecycle[0m[91m globule@0.2.0~preinstall: globule@0.2.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle gaze@1.0.0~preinstall: gaze@1.0.0
+npm[0m[91m info[0m[91m [0m[91mlifecycle signal-exit@2.1.2~preinstall: signal-exit@2.1.2
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m loud-rejection@1.3.0~preinstall: loud-rejection@1.3.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m spdx-exceptions@1.0.4~preinstall: spdx-exceptions@1.0.4
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m spdx-license-ids@1.2.1~preinstall: spdx-license-ids@1.2.1
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle spdx-expression-parse@1.0.2~preinstall: spdx-expression-parse@1.0.2
+[0m[91mnpm info[0m[91m lifecycle spdx-correct@1.0.2~preinstall: spdx-correct@1.0.2
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle sprintf-js@1.0.3~preinstall: sprintf-js@1.0.3
+npm info[0m[91m lifecycle argparse@1.0.7~preinstall: argparse@1.0.7
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m js-yaml@3.5.5~preinstall: js-yaml@3.5.5
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m statuses@1.3.0~preinstall: statuses@1.3.0
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle http-errors@1.3.1~preinstall: http-errors@1.3.1
+[0m[91mnpm[0m[91m info [0m[91mlifecycle strip-ansi@3.0.1~preinstall: strip-ansi@3.0.1
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle[0m[91m strip-bom@2.0.0~preinstall: strip-bom@2.0.0
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle load-json-file@1.1.0~preinstall: load-json-file@1.1.0
+[0m[91mnpm[0m[91m info [0m[91mlifecycle[0m[91m strip-indent@1.0.1~preinstall: strip-indent@1.0.1
+[0m[91mnpm[0m[91m info [0m[91mlifecycle redent@1.0.0~preinstall: redent@1.0.0
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle supports-color@2.0.0~preinstall: supports-color@2.0.0
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle chalk@1.1.3~preinstall: chalk@1.1.3
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m grunt-legacy-log-utils@1.0.0~preinstall: grunt-legacy-log-utils@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo lifecycle[0m[91m trim-newlines@1.0.0~preinstall: trim-newlines@1.0.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle[0m[91m type-is@1.6.13~preinstall: type-is@1.6.13
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m underscore.string@3.2.3~preinstall: underscore.string@3.2.3
+npm [0m[91minfo lifecycle grunt-legacy-log@1.0.0~preinstall: grunt-legacy-log@1.0.0
+npm [0m[91minfo lifecycle[0m[91m unpipe@1.0.0~preinstall: unpipe@1.0.0
+[0m[91mnpm [0m[91minfo lifecycle raw-body@2.1.6~preinstall: raw-body@2.1.6
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle body-parser@1.14.2~preinstall: body-parser@1.14.2
+[0m[91mnpm info lifecycle uri-path@1.0.0~preinstall: uri-path@1.0.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle grunt-contrib-coffee@1.0.0~preinstall: grunt-contrib-coffee@1.0.0
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle validate-npm-package-license@3.0.1~preinstall: validate-npm-package-license@3.0.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle normalize-package-data@2.3.5~preinstall: normalize-package-data@2.3.5
+[0m[91mnpm[0m[91m info [0m[91mlifecycle read-pkg@1.1.0~preinstall: read-pkg@1.1.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle read-pkg-up@1.0.1~preinstall: read-pkg-up@1.0.1
+[0m[91mnpm[0m[91m info [0m[91mlifecycle meow@3.7.0~preinstall: meow@3.7.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m dateformat@1.0.12~preinstall: dateformat@1.0.12
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle websocket-extensions@0.1.1~preinstall: websocket-extensions@0.1.1
+npm info[0m[91m lifecycle[0m[91m websocket-driver@0.6.4~preinstall: websocket-driver@0.6.4
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m faye-websocket@0.10.0~preinstall: faye-websocket@0.10.0
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m tiny-lr@0.2.1~preinstall: tiny-lr@0.2.1
+[0m[91mnpm[0m[91m info [0m[91mlifecycle[0m[91m grunt-contrib-watch@1.0.0~preinstall: grunt-contrib-watch@1.0.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle which@1.2.9~preinstall: which@1.2.9
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m grunt-legacy-util@1.0.0~preinstall: grunt-legacy-util@1.0.0
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle wrappy@1.0.2~preinstall: wrappy@1.0.2
+[0m[91mnpm [0m[91minfo lifecycle once@1.3.3~preinstall: once@1.3.3
+npm [0m[91minfo lifecycle inflight@1.0.5~preinstall: inflight@1.0.5
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m glob@7.0.3~preinstall: glob@7.0.3
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle rimraf@2.5.2~preinstall: rimraf@2.5.2
+[0m[91mnpm[0m[91m info [0m[91mlifecycle grunt-newer@1.2.0~preinstall: grunt-newer@1.2.0
+[0m[91mnpm[0m[91m info [0m[91mlifecycle[0m[91m rimraf@2.5.2~preinstall: rimraf@2.5.2
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle grunt-contrib-clean@1.0.0~preinstall: grunt-contrib-clean@1.0.0
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle glob@5.0.15~preinstall: glob@5.0.15
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle findup-sync@0.3.0~preinstall: findup-sync@0.3.0
+[0m[91mnpm info lifecycle[0m[91m grunt-cli@1.2.0~preinstall: grunt-cli@1.2.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m grunt@1.0.1~preinstall: grunt@1.0.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff abbrev@1.0.7
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff ansi-regex@2.0.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff ansi-styles@2.2.1
+[0m[91mnpm[0m[91m info[0m[91m linkStuff[0m[91m array-find-index@1.0.1
+[0m[91mnpm[0m[91m info[0m[91m linkStuff[0m[91m async@1.5.2
+[0m[91mnpm [0m[91minfo [0m[91mlinkStuff balanced-match@0.4.1
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff[0m[91m qs@5.2.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff[0m[91m builtin-modules@1.1.1
+[0m[91mnpm[0m[91m info linkStuff[0m[91m bytes@2.2.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff camelcase@2.1.1
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff[0m[91m coffee-script@1.10.0
+[0m[91mnpm [0m[91mWARN[0m[91m [0m[91mprefer global coffee-script@1.10.0 should be installed with -g
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff colors@1.1.2
+[0m[91mnpm[0m[91m [0m[91minfo linkStuff commander@2.3.0
+[0m[91mnpm [0m[91minfo linkStuff[0m[91m concat-map@0.0.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m brace-expansion@1.1.4
+[0m[91mnpm[0m[91m info [0m[91mlinkStuff content-type@1.0.2
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff decamelize@1.2.0
+[0m[91mnpm info linkStuff depd@1.1.0
+[0m[91mnpm [0m[91minfo[0m[91m linkStuff diff@1.4.0
+[0m[91mnpm[0m[91m info [0m[91mlinkStuff[0m[91m ee-first@1.1.1
+[0m[91mnpm[0m[91m info linkStuff escape-string-regexp@1.0.5
+[0m[91mnpm[0m[91m info linkStuff[0m[91m esprima@2.7.2
+[0m[91mnpm[0m[91m info [0m[91mlinkStuff eventemitter2@0.4.14
+[0m[91mnpm[0m[91m info[0m[91m linkStuff[0m[91m exit@0.1.2
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m get-stdin@4.0.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m getobject@0.1.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff[0m[91m lodash@2.4.2
+[0m[91mnpm [0m[91minfo[0m[91m linkStuff graceful-fs@4.1.4
+[0m[91mnpm [0m[91minfo [0m[91mlinkStuff[0m[91m growl@1.8.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff ansi-regex@1.1.1
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff[0m[91m has-ansi@1.0.3
+[0m[91mnpm [0m[91minfo[0m[91m linkStuff[0m[91m lodash@4.3.0
+[0m[91mnpm [0m[91minfo [0m[91mlinkStuff strip-ansi@2.0.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m supports-color@1.3.1
+[0m[91mnpm info[0m[91m linkStuff[0m[91m chalk@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff lodash@3.10.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m grunt-include-replace@4.0.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m grunt-known-options@1.1.0
+[0m[91mnpm info[0m[91m linkStuff[0m[91m lodash@4.3.0
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff[0m[91m lodash@3.10.1
+[0m[91mnpm[0m[91m [0m[91minfo linkStuff lodash@4.3.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m has-ansi@2.0.0
+[0m[91mnpm [0m[91minfo[0m[91m linkStuff[0m[91m hooker@0.2.3
+[0m[91mnpm[0m[91m info[0m[91m linkStuff[0m[91m hosted-git-info@2.1.5
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff iconv-lite@0.4.13
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff inherits@2.0.1
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff[0m[91m is-arrayish@0.2.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff error-ex@1.3.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m is-builtin-module@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m is-utf8@0.2.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff[0m[91m isexe@1.1.2
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m commander@0.6.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m mkdirp@0.3.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff jade@0.26.3
+[0m[91mnpm[0m[91m info linkStuff livereload-js@2.2.2
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m lodash@4.12.0
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m lru-cache@2.7.3
+[0m[91mnpm [0m[91minfo [0m[91mlinkStuff[0m[91m map-obj@1.0.1
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff camelcase-keys@2.1.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff media-typer@0.3.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m mime-db@1.23.0
+[0m[91mnpm info[0m[91m [0m[91mlinkStuff mime-types@2.1.11
+[0m[91mnpm[0m[91m [0m[91minfo linkStuff[0m[91m minimatch@3.0.0
+[0m[91mnpm info linkStuff minimist@1.2.0
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff[0m[91m minimist@0.0.8
+[0m[91mnpm info[0m[91m linkStuff[0m[91m mkdirp@0.5.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m escape-string-regexp@1.0.2
+[0m[91mnpm[0m[91m [0m[91minfo linkStuff graceful-fs@2.0.3
+[0m[91mnpm[0m[91m info[0m[91m linkStuff[0m[91m supports-color@1.2.0
+[0m[91mnpm info [0m[91mlinkStuff ms@0.7.1
+[0m[91mnpm info[0m[91m linkStuff[0m[91m debug@2.2.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m nopt@3.0.6
+[0m[91mnpm info[0m[91m [0m[91mlinkStuff[0m[91m number-is-nan@1.0.0
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff[0m[91m is-finite@1.0.1
+[0m[91mnpm [0m[91minfo[0m[91m linkStuff[0m[91m object-assign@4.1.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m on-finished@2.3.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m parse-json@2.2.0
+[0m[91mnpm [0m[91minfo[0m[91m linkStuff[0m[91m parseurl@1.3.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m path-is-absolute@1.0.0
+[0m[91mnpm info[0m[91m linkStuff[0m[91m pify@2.3.0
+[0m[91mnpm info[0m[91m [0m[91mlinkStuff[0m[91m pinkie@2.0.4
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m pinkie-promise@2.0.1
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m path-type@1.1.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m path-exists@2.1.0
+[0m[91mnpm info linkStuff find-up@1.1.2
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m qs@5.1.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m bytes@2.3.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m repeating@2.0.1
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff indent-string@2.1.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff resolve@1.1.7
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff rimraf@2.2.8
+[0m[91mnpm info[0m[91m linkStuff[0m[91m semver@5.1.0
+[0m[91mnpm[0m[91m [0m[91minfo linkStuff[0m[91m should-type@0.2.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m should-format@0.3.2
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m should-equal@0.7.3
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m should@8.3.2
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m sigmund@1.0.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m minimatch@0.2.14
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m glob@3.2.3
+[0m[91mnpm info[0m[91m [0m[91mlinkStuff mocha@2.4.5
+[0m[91mnpm[0m[91m info[0m[91m linkStuff[0m[91m grunt-mocha-cli@2.1.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff minimatch@0.2.14
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m minimatch@0.3.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m glob@3.2.11
+[0m[91mnpm[0m[91m info[0m[91m linkStuff[0m[91m globule@0.2.0
+[0m[91mnpm [0m[91minfo linkStuff[0m[91m gaze@1.0.0
+[0m[91mnpm [0m[91minfo[0m[91m linkStuff[0m[91m signal-exit@2.1.2
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff[0m[91m loud-rejection@1.3.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m spdx-exceptions@1.0.4
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff[0m[91m spdx-license-ids@1.2.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m spdx-expression-parse@1.0.2
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff spdx-correct@1.0.2
+[0m[91mnpm [0m[91minfo [0m[91mlinkStuff sprintf-js@1.0.3
+[0m[91mnpm info[0m[91m linkStuff[0m[91m argparse@1.0.7
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m js-yaml@3.5.5
+[0m[91mnpm[0m[91m info[0m[91m linkStuff[0m[91m statuses@1.3.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m http-errors@1.3.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m strip-ansi@3.0.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m strip-bom@2.0.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff load-json-file@1.1.0
+[0m[91mnpm[0m[91m info[0m[91m linkStuff strip-indent@1.0.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff redent@1.0.0
+[0m[91mnpm info[0m[91m linkStuff supports-color@2.0.0
+[0m[91mnpm [0m[91minfo[0m[91m linkStuff[0m[91m chalk@1.1.3
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff grunt-legacy-log-utils@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m trim-newlines@1.0.0
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m type-is@1.6.13
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff[0m[91m underscore.string@3.2.3
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m grunt-legacy-log@1.0.0
+[0m[91mnpm [0m[91minfo[0m[91m linkStuff[0m[91m unpipe@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m raw-body@2.1.6
+[0m[91mnpm info [0m[91mlinkStuff body-parser@1.14.2
+[0m[91mnpm[0m[91m info[0m[91m linkStuff[0m[91m uri-path@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m grunt-contrib-coffee@1.0.0
+[0m[91mnpm [0m[91minfo [0m[91mlinkStuff[0m[91m validate-npm-package-license@3.0.1
+[0m[91mnpm [0m[91minfo [0m[91mlinkStuff normalize-package-data@2.3.5
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m read-pkg@1.1.0
+[0m[91mnpm [0m[91minfo linkStuff[0m[91m read-pkg-up@1.0.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff[0m[91m meow@3.7.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff dateformat@1.0.12
+[0m[91mnpm [0m[91minfo linkStuff[0m[91m websocket-extensions@0.1.1
+[0m[91mnpm [0m[91minfo[0m[91m linkStuff[0m[91m websocket-driver@0.6.4
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m faye-websocket@0.10.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff tiny-lr@0.2.1
+[0m[91mnpm info[0m[91m linkStuff[0m[91m grunt-contrib-watch@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m which@1.2.9
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m grunt-legacy-util@1.0.0
+[0m[91mnpm [0m[91minfo[0m[91m linkStuff[0m[91m wrappy@1.0.2
+[0m[91mnpm info[0m[91m linkStuff once@1.3.3
+[0m[91mnpm[0m[91m info[0m[91m linkStuff[0m[91m inflight@1.0.5
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlinkStuff glob@7.0.3
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m rimraf@2.5.2
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff grunt-newer@1.2.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff rimraf@2.5.2
+[0m[91mnpm [0m[91minfo [0m[91mlinkStuff grunt-contrib-clean@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff[0m[91m glob@5.0.15
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlinkStuff findup-sync@0.3.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlinkStuff grunt-cli@1.2.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m linkStuff[0m[91m grunt@1.0.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle abbrev@1.0.7~install: abbrev@1.0.7
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m ansi-regex@2.0.0~install: ansi-regex@2.0.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle ansi-styles@2.2.1~install: ansi-styles@2.2.1
+[0m[91mnpm[0m[91m info lifecycle array-find-index@1.0.1~install: array-find-index@1.0.1
+[0m[91mnpm info[0m[91m lifecycle async@1.5.2~install: async@1.5.2
+[0m[91mnpm[0m[91m info [0m[91mlifecycle balanced-match@0.4.1~install: balanced-match@0.4.1
+[0m[91mnpm[0m[91m info [0m[91mlifecycle[0m[91m qs@5.2.0~install: qs@5.2.0
+[0m[91mnpm[0m[91m info lifecycle builtin-modules@1.1.1~install: builtin-modules@1.1.1
+[0m[91mnpm[0m[91m info lifecycle bytes@2.2.0~install: bytes@2.2.0
+[0m[91mnpm[0m[91m info lifecycle[0m[91m camelcase@2.1.1~install: camelcase@2.1.1
+[0m[91mnpm [0m[91minfo lifecycle coffee-script@1.10.0~install: coffee-script@1.10.0
+[0m[91mnpm[0m[91m info lifecycle[0m[91m colors@1.1.2~install: colors@1.1.2
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m commander@2.3.0~install: commander@2.3.0
+[0m[91mnpm [0m[91minfo lifecycle concat-map@0.0.1~install: concat-map@0.0.1
+[0m[91mnpm info [0m[91mlifecycle brace-expansion@1.1.4~install: brace-expansion@1.1.4
+[0m[91mnpm[0m[91m info [0m[91mlifecycle[0m[91m content-type@1.0.2~install: content-type@1.0.2
+[0m[91mnpm [0m[91minfo lifecycle decamelize@1.2.0~install: decamelize@1.2.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m depd@1.1.0~install: depd@1.1.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m diff@1.4.0~install: diff@1.4.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m ee-first@1.1.1~install: ee-first@1.1.1
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle escape-string-regexp@1.0.5~install: escape-string-regexp@1.0.5
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle esprima@2.7.2~install: esprima@2.7.2
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle[0m[91m eventemitter2@0.4.14~install: eventemitter2@0.4.14
+[0m[91mnpm [0m[91minfo lifecycle exit@0.1.2~install: exit@0.1.2
+[0m[91mnpm[0m[91m info lifecycle[0m[91m get-stdin@4.0.1~install: get-stdin@4.0.1
+[0m[91mnpm[0m[91m info lifecycle getobject@0.1.0~install: getobject@0.1.0
+[0m[91mnpm[0m[91m info [0m[91mlifecycle lodash@2.4.2~install: lodash@2.4.2
+[0m[91mnpm[0m[91m info [0m[91mlifecycle[0m[91m graceful-fs@4.1.4~install: graceful-fs@4.1.4
+[0m[91mnpm[0m[91m info lifecycle[0m[91m growl@1.8.1~install: growl@1.8.1
+[0m[91mnpm[0m[91m info [0m[91mlifecycle ansi-regex@1.1.1~install: ansi-regex@1.1.1
+[0m[91mnpm[0m[91m info lifecycle[0m[91m has-ansi@1.0.3~install: has-ansi@1.0.3
+[0m[91mnpm [0m[91minfo lifecycle lodash@4.3.0~install: lodash@4.3.0
+[0m[91mnpm info[0m[91m lifecycle strip-ansi@2.0.1~install: strip-ansi@2.0.1
+[0m[91mnpm[0m[91m info lifecycle supports-color@1.3.1~install: supports-color@1.3.1
+[0m[91mnpm[0m[91m info[0m[91m lifecycle chalk@1.0.0~install: chalk@1.0.0
+[0m[91mnpm[0m[91m info lifecycle lodash@3.10.1~install: lodash@3.10.1
+[0m[91mnpm[0m[91m info lifecycle grunt-include-replace@4.0.1~install: grunt-include-replace@4.0.1
+[0m[91mnpm[0m[91m info lifecycle grunt-known-options@1.1.0~install: grunt-known-options@1.1.0
+[0m[91mnpm[0m[91m info lifecycle lodash@4.3.0~install: lodash@4.3.0
+[0m[91mnpm [0m[91minfo lifecycle lodash@3.10.1~install: lodash@3.10.1
+[0m[91mnpm[0m[91m info lifecycle lodash@4.3.0~install: lodash@4.3.0
+[0m[91mnpm[0m[91m info lifecycle has-ansi@2.0.0~install: has-ansi@2.0.0
+[0m[91mnpm[0m[91m info lifecycle hooker@0.2.3~install: hooker@0.2.3
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle hosted-git-info@2.1.5~install: hosted-git-info@2.1.5
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle iconv-lite@0.4.13~install: iconv-lite@0.4.13
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m inherits@2.0.1~install: inherits@2.0.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m is-arrayish@0.2.1~install: is-arrayish@0.2.1
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m error-ex@1.3.0~install: error-ex@1.3.0
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m is-builtin-module@1.0.0~install: is-builtin-module@1.0.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m is-utf8@0.2.1~install: is-utf8@0.2.1
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle[0m[91m isexe@1.1.2~install: isexe@1.1.2
+[0m[91mnpm info [0m[91mlifecycle commander@0.6.1~install: commander@0.6.1
+[0m[91mnpm [0m[91minfo lifecycle mkdirp@0.3.0~install: mkdirp@0.3.0
+[0m[91mnpm info [0m[91mlifecycle[0m[91m jade@0.26.3~install: jade@0.26.3
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m livereload-js@2.2.2~install: livereload-js@2.2.2
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m lodash@4.12.0~install: lodash@4.12.0
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m lru-cache@2.7.3~install: lru-cache@2.7.3
+[0m[91mnpm[0m[91m info lifecycle map-obj@1.0.1~install: map-obj@1.0.1
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m camelcase-keys@2.1.0~install: camelcase-keys@2.1.0
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m media-typer@0.3.0~install: media-typer@0.3.0
+[0m[91mnpm info[0m[91m [0m[91mlifecycle[0m[91m mime-db@1.23.0~install: mime-db@1.23.0
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m mime-types@2.1.11~install: mime-types@2.1.11
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle minimatch@3.0.0~install: minimatch@3.0.0
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m minimist@1.2.0~install: minimist@1.2.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle minimist@0.0.8~install: minimist@0.0.8
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle mkdirp@0.5.1~install: mkdirp@0.5.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m escape-string-regexp@1.0.2~install: escape-string-regexp@1.0.2
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m graceful-fs@2.0.3~install: graceful-fs@2.0.3
+[0m[91mnpm info[0m[91m lifecycle[0m[91m supports-color@1.2.0~install: supports-color@1.2.0
+[0m[91mnpm info[0m[91m lifecycle[0m[91m ms@0.7.1~install: ms@0.7.1
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle debug@2.2.0~install: debug@2.2.0
+[0m[91mnpm[0m[91m info [0m[91mlifecycle nopt@3.0.6~install: nopt@3.0.6
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m number-is-nan@1.0.0~install: number-is-nan@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle is-finite@1.0.1~install: is-finite@1.0.1
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m object-assign@4.1.0~install: object-assign@4.1.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle on-finished@2.3.0~install: on-finished@2.3.0
+[0m[91mnpm info [0m[91mlifecycle[0m[91m parse-json@2.2.0~install: parse-json@2.2.0
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle parseurl@1.3.1~install: parseurl@1.3.1
+[0m[91mnpm info[0m[91m [0m[91mlifecycle[0m[91m path-is-absolute@1.0.0~install: path-is-absolute@1.0.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle pify@2.3.0~install: pify@2.3.0
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m pinkie@2.0.4~install: pinkie@2.0.4
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m pinkie-promise@2.0.1~install: pinkie-promise@2.0.1
+[0m[91mnpm info[0m[91m [0m[91mlifecycle[0m[91m path-type@1.1.0~install: path-type@1.1.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m path-exists@2.1.0~install: path-exists@2.1.0
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle find-up@1.1.2~install: find-up@1.1.2
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m qs@5.1.0~install: qs@5.1.0
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m bytes@2.3.0~install: bytes@2.3.0
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle repeating@2.0.1~install: repeating@2.0.1
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m indent-string@2.1.0~install: indent-string@2.1.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m resolve@1.1.7~install: resolve@1.1.7
+[0m[91mnpm [0m[91minfo lifecycle[0m[91m rimraf@2.2.8~install: rimraf@2.2.8
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m semver@5.1.0~install: semver@5.1.0
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle[0m[91m should-type@0.2.0~install: should-type@0.2.0
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle[0m[91m should-format@0.3.2~install: should-format@0.3.2
+[0m[91mnpm[0m[91m info[0m[91m lifecycle should-equal@0.7.3~install: should-equal@0.7.3
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m should@8.3.2~install: should@8.3.2
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle[0m[91m sigmund@1.0.1~install: sigmund@1.0.1
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m minimatch@0.2.14~install: minimatch@0.2.14
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle glob@3.2.3~install: glob@3.2.3
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m mocha@2.4.5~install: mocha@2.4.5
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle grunt-mocha-cli@2.1.0~install: grunt-mocha-cli@2.1.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle minimatch@0.2.14~install: minimatch@0.2.14
+[0m[91mnpm info lifecycle minimatch@0.3.0~install: minimatch@0.3.0
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m glob@3.2.11~install: glob@3.2.11
+[0m[91mnpm info lifecycle globule@0.2.0~install: globule@0.2.0
+[0m[91mnpm info lifecycle gaze@1.0.0~install: gaze@1.0.0
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle signal-exit@2.1.2~install: signal-exit@2.1.2
+[0m[91mnpm [0m[91minfo lifecycle loud-rejection@1.3.0~install: loud-rejection@1.3.0
+[0m[91mnpm[0m[91m [0m[91minfo lifecycle spdx-exceptions@1.0.4~install: spdx-exceptions@1.0.4
+[0m[91mnpm[0m[91m info lifecycle spdx-license-ids@1.2.1~install: spdx-license-ids@1.2.1
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle spdx-expression-parse@1.0.2~install: spdx-expression-parse@1.0.2
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle spdx-correct@1.0.2~install: spdx-correct@1.0.2
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle sprintf-js@1.0.3~install: sprintf-js@1.0.3
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m argparse@1.0.7~install: argparse@1.0.7
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m js-yaml@3.5.5~install: js-yaml@3.5.5
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m statuses@1.3.0~install: statuses@1.3.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m http-errors@1.3.1~install: http-errors@1.3.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle strip-ansi@3.0.1~install: strip-ansi@3.0.1
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle[0m[91m strip-bom@2.0.0~install: strip-bom@2.0.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m load-json-file@1.1.0~install: load-json-file@1.1.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m strip-indent@1.0.1~install: strip-indent@1.0.1
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m redent@1.0.0~install: redent@1.0.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle[0m[91m supports-color@2.0.0~install: supports-color@2.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle chalk@1.1.3~install: chalk@1.1.3
+[0m[91mnpm[0m[91m info lifecycle grunt-legacy-log-utils@1.0.0~install: grunt-legacy-log-utils@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle trim-newlines@1.0.0~install: trim-newlines@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m type-is@1.6.13~install: type-is@1.6.13
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle underscore.string@3.2.3~install: underscore.string@3.2.3
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle[0m[91m grunt-legacy-log@1.0.0~install: grunt-legacy-log@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m unpipe@1.0.0~install: unpipe@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo lifecycle raw-body@2.1.6~install: raw-body@2.1.6
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m body-parser@1.14.2~install: body-parser@1.14.2
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle uri-path@1.0.0~install: uri-path@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle[0m[91m grunt-contrib-coffee@1.0.0~install: grunt-contrib-coffee@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle validate-npm-package-license@3.0.1~install: validate-npm-package-license@3.0.1
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle normalize-package-data@2.3.5~install: normalize-package-data@2.3.5
+[0m[91mnpm[0m[91m info lifecycle read-pkg@1.1.0~install: read-pkg@1.1.0
+[0m[91mnpm [0m[91minfo lifecycle read-pkg-up@1.0.1~install: read-pkg-up@1.0.1
+[0m[91mnpm[0m[91m info lifecycle meow@3.7.0~install: meow@3.7.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m lifecycle[0m[91m dateformat@1.0.12~install: dateformat@1.0.12
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle websocket-extensions@0.1.1~install: websocket-extensions@0.1.1
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle websocket-driver@0.6.4~install: websocket-driver@0.6.4
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle faye-websocket@0.10.0~install: faye-websocket@0.10.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle[0m[91m tiny-lr@0.2.1~install: tiny-lr@0.2.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m grunt-contrib-watch@1.0.0~install: grunt-contrib-watch@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m which@1.2.9~install: which@1.2.9
+[0m[91mnpm info lifecycle grunt-legacy-util@1.0.0~install: grunt-legacy-util@1.0.0
+[0m[91mnpm info lifecycle wrappy@1.0.2~install: wrappy@1.0.2
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle once@1.3.3~install: once@1.3.3
+[0m[91mnpm info lifecycle inflight@1.0.5~install: inflight@1.0.5
+[0m[91mnpm info [0m[91mlifecycle[0m[91m glob@7.0.3~install: glob@7.0.3
+[0m[91mnpm info lifecycle[0m[91m rimraf@2.5.2~install: rimraf@2.5.2
+[0m[91mnpm info lifecycle grunt-newer@1.2.0~install: grunt-newer@1.2.0
+[0m[91mnpm info lifecycle rimraf@2.5.2~install: rimraf@2.5.2
+[0m[91mnpm info lifecycle grunt-contrib-clean@1.0.0~install: grunt-contrib-clean@1.0.0
+[0m[91mnpm[0m[91m [0m[91minfo [0m[91mlifecycle glob@5.0.15~install: glob@5.0.15
+[0m[91mnpm info lifecycle findup-sync@0.3.0~install: findup-sync@0.3.0
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle[0m[91m grunt-cli@1.2.0~install: grunt-cli@1.2.0
+[0m[91mnpm info lifecycle grunt@1.0.1~install: grunt@1.0.1
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle abbrev@1.0.7~postinstall: abbrev@1.0.7
+[0m[91mnpm info lifecycle ansi-regex@2.0.0~postinstall: ansi-regex@2.0.0
+[0m[91mnpm info[0m[91m lifecycle[0m[91m ansi-styles@2.2.1~postinstall: ansi-styles@2.2.1
+[0m[91mnpm info[0m[91m lifecycle array-find-index@1.0.1~postinstall: array-find-index@1.0.1
+[0m[91mnpm info lifecycle async@1.5.2~postinstall: async@1.5.2
+[0m[91mnpm[0m[91m info lifecycle balanced-match@0.4.1~postinstall: balanced-match@0.4.1
+[0m[91mnpm [0m[91minfo lifecycle qs@5.2.0~postinstall: qs@5.2.0
+[0m[91mnpm info lifecycle builtin-modules@1.1.1~postinstall: builtin-modules@1.1.1
+[0m[91mnpm info lifecycle bytes@2.2.0~postinstall: bytes@2.2.0
+[0m[91mnpm info lifecycle camelcase@2.1.1~postinstall: camelcase@2.1.1
+[0m[91mnpm info lifecycle[0m[91m coffee-script@1.10.0~postinstall: coffee-script@1.10.0
+[0m[91mnpm info lifecycle colors@1.1.2~postinstall: colors@1.1.2
+[0m[91mnpm info lifecycle commander@2.3.0~postinstall: commander@2.3.0
+[0m[91mnpm info lifecycle concat-map@0.0.1~postinstall: concat-map@0.0.1
+npm info lifecycle brace-expansion@1.1.4~postinstall: brace-expansion@1.1.4
+[0m[91mnpm [0m[91minfo [0m[91mlifecycle content-type@1.0.2~postinstall: content-type@1.0.2
+[0m[91mnpm info lifecycle decamelize@1.2.0~postinstall: decamelize@1.2.0
+[0m[91mnpm info lifecycle depd@1.1.0~postinstall: depd@1.1.0
+[0m[91mnpm info lifecycle diff@1.4.0~postinstall: diff@1.4.0
+[0m[91mnpm info lifecycle ee-first@1.1.1~postinstall: ee-first@1.1.1
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m escape-string-regexp@1.0.5~postinstall: escape-string-regexp@1.0.5
+[0m[91mnpm info[0m[91m lifecycle esprima@2.7.2~postinstall: esprima@2.7.2
+[0m[91mnpm info lifecycle eventemitter2@0.4.14~postinstall: eventemitter2@0.4.14
+[0m[91mnpm info lifecycle exit@0.1.2~postinstall: exit@0.1.2
+[0m[91mnpm info lifecycle get-stdin@4.0.1~postinstall: get-stdin@4.0.1
+[0m[91mnpm info lifecycle getobject@0.1.0~postinstall: getobject@0.1.0
+[0m[91mnpm info lifecycle lodash@2.4.2~postinstall: lodash@2.4.2
+[0m[91mnpm info lifecycle graceful-fs@4.1.4~postinstall: graceful-fs@4.1.4
+[0m[91mnpm info lifecycle growl@1.8.1~postinstall: growl@1.8.1
+[0m[91mnpm info[0m[91m [0m[91mlifecycle[0m[91m ansi-regex@1.1.1~postinstall: ansi-regex@1.1.1
+[0m[91mnpm info lifecycle has-ansi@1.0.3~postinstall: has-ansi@1.0.3
+[0m[91mnpm info lifecycle lodash@4.3.0~postinstall: lodash@4.3.0
+[0m[91mnpm info lifecycle strip-ansi@2.0.1~postinstall: strip-ansi@2.0.1
+[0m[91mnpm info lifecycle[0m[91m supports-color@1.3.1~postinstall: supports-color@1.3.1
+[0m[91mnpm info lifecycle chalk@1.0.0~postinstall: chalk@1.0.0
+[0m[91mnpm info lifecycle lodash@3.10.1~postinstall: lodash@3.10.1
+[0m[91mnpm info lifecycle grunt-include-replace@4.0.1~postinstall: grunt-include-replace@4.0.1
+[0m[91mnpm info [0m[91mlifecycle grunt-known-options@1.1.0~postinstall: grunt-known-options@1.1.0
+[0m[91mnpm[0m[91m info lifecycle lodash@4.3.0~postinstall: lodash@4.3.0
+[0m[91mnpm info lifecycle lodash@3.10.1~postinstall: lodash@3.10.1
+[0m[91mnpm info lifecycle lodash@4.3.0~postinstall: lodash@4.3.0
+[0m[91mnpm info lifecycle has-ansi@2.0.0~postinstall: has-ansi@2.0.0
+[0m[91mnpm info lifecycle hooker@0.2.3~postinstall: hooker@0.2.3
+[0m[91mnpm info lifecycle hosted-git-info@2.1.5~postinstall: hosted-git-info@2.1.5
+[0m[91mnpm info lifecycle iconv-lite@0.4.13~postinstall: iconv-lite@0.4.13
+[0m[91mnpm info lifecycle inherits@2.0.1~postinstall: inherits@2.0.1
+[0m[91mnpm info lifecycle is-arrayish@0.2.1~postinstall: is-arrayish@0.2.1
+[0m[91mnpm info lifecycle error-ex@1.3.0~postinstall: error-ex@1.3.0
+[0m[91mnpm info lifecycle is-builtin-module@1.0.0~postinstall: is-builtin-module@1.0.0
+[0m[91mnpm info lifecycle is-utf8@0.2.1~postinstall: is-utf8@0.2.1
+[0m[91mnpm info lifecycle isexe@1.1.2~postinstall: isexe@1.1.2
+[0m[91mnpm info lifecycle commander@0.6.1~postinstall: commander@0.6.1
+[0m[91mnpm info lifecycle mkdirp@0.3.0~postinstall: mkdirp@0.3.0
+[0m[91mnpm info lifecycle jade@0.26.3~postinstall: jade@0.26.3
+[0m[91mnpm info lifecycle livereload-js@2.2.2~postinstall: livereload-js@2.2.2
+[0m[91mnpm info [0m[91mlifecycle lodash@4.12.0~postinstall: lodash@4.12.0
+[0m[91mnpm info lifecycle lru-cache@2.7.3~postinstall: lru-cache@2.7.3
+[0m[91mnpm [0m[91minfo lifecycle map-obj@1.0.1~postinstall: map-obj@1.0.1
+[0m[91mnpm info lifecycle camelcase-keys@2.1.0~postinstall: camelcase-keys@2.1.0
+npm info lifecycle media-typer@0.3.0~postinstall: media-typer@0.3.0
+[0m[91mnpm info lifecycle mime-db@1.23.0~postinstall: mime-db@1.23.0
+[0m[91mnpm info lifecycle[0m[91m mime-types@2.1.11~postinstall: mime-types@2.1.11
+[0m[91mnpm info lifecycle minimatch@3.0.0~postinstall: minimatch@3.0.0
+[0m[91mnpm info lifecycle minimist@1.2.0~postinstall: minimist@1.2.0
+[0m[91mnpm info lifecycle minimist@0.0.8~postinstall: minimist@0.0.8
+[0m[91mnpm info lifecycle[0m[91m mkdirp@0.5.1~postinstall: mkdirp@0.5.1
+[0m[91mnpm info lifecycle escape-string-regexp@1.0.2~postinstall: escape-string-regexp@1.0.2
+[0m[91mnpm info lifecycle graceful-fs@2.0.3~postinstall: graceful-fs@2.0.3
+[0m[91mnpm info lifecycle supports-color@1.2.0~postinstall: supports-color@1.2.0
+[0m[91mnpm info[0m[91m lifecycle ms@0.7.1~postinstall: ms@0.7.1
+[0m[91mnpm info lifecycle debug@2.2.0~postinstall: debug@2.2.0
+npm info lifecycle nopt@3.0.6~postinstall: nopt@3.0.6
+[0m[91mnpm info [0m[91mlifecycle number-is-nan@1.0.0~postinstall: number-is-nan@1.0.0
+[0m[91mnpm info lifecycle is-finite@1.0.1~postinstall: is-finite@1.0.1
+[0m[91mnpm info lifecycle object-assign@4.1.0~postinstall: object-assign@4.1.0
+[0m[91mnpm info lifecycle on-finished@2.3.0~postinstall: on-finished@2.3.0
+npm info lifecycle parse-json@2.2.0~postinstall: parse-json@2.2.0
+[0m[91mnpm[0m[91m info[0m[91m lifecycle parseurl@1.3.1~postinstall: parseurl@1.3.1
+[0m[91mnpm info lifecycle path-is-absolute@1.0.0~postinstall: path-is-absolute@1.0.0
+[0m[91mnpm info lifecycle pify@2.3.0~postinstall: pify@2.3.0
+[0m[91mnpm info lifecycle pinkie@2.0.4~postinstall: pinkie@2.0.4
+[0m[91mnpm info lifecycle pinkie-promise@2.0.1~postinstall: pinkie-promise@2.0.1
+[0m[91mnpm info [0m[91mlifecycle path-type@1.1.0~postinstall: path-type@1.1.0
+[0m[91mnpm [0m[91minfo[0m[91m lifecycle path-exists@2.1.0~postinstall: path-exists@2.1.0
+[0m[91mnpm info[0m[91m lifecycle find-up@1.1.2~postinstall: find-up@1.1.2
+[0m[91mnpm info lifecycle qs@5.1.0~postinstall: qs@5.1.0
+[0m[91mnpm[0m[91m [0m[91minfo[0m[91m [0m[91mlifecycle[0m[91m bytes@2.3.0~postinstall: bytes@2.3.0
+[0m[91mnpm[0m[91m info [0m[91mlifecycle[0m[91m repeating@2.0.1~postinstall: repeating@2.0.1
+[0m[91mnpm[0m[91m info[0m[91m [0m[91mlifecycle indent-string@2.1.0~postinstall: indent-string@2.1.0
+[0m[91mnpm info lifecycle resolve@1.1.7~postinstall: resolve@1.1.7
+[0m[91mnpm info[0m[91m lifecycle rimraf@2.2.8~postinstall: rimraf@2.2.8
+[0m[91mnpm info lifecycle semver@5.1.0~postinstall: semver@5.1.0
+[0m[91mnpm info lifecycle should-type@0.2.0~postinstall: should-type@0.2.0
+[0m[91mnpm info lifecycle should-format@0.3.2~postinstall: should-format@0.3.2
+[0m[91mnpm info [0m[91mlifecycle should-equal@0.7.3~postinstall: should-equal@0.7.3
+[0m[91mnpm [0m[91minfo[0m[91m [0m[91mlifecycle should@8.3.2~postinstall: should@8.3.2
+[0m[91mnpm info lifecycle sigmund@1.0.1~postinstall: sigmund@1.0.1
+[0m[91mnpm info [0m[91mlifecycle minimatch@0.2.14~postinstall: minimatch@0.2.14
+[0m[91mnpm info lifecycle glob@3.2.3~postinstall: glob@3.2.3
+[0m[91mnpm[0m[91m [0m[91minfo lifecycle mocha@2.4.5~postinstall: mocha@2.4.5
+[0m[91mnpm info lifecycle grunt-mocha-cli@2.1.0~postinstall: grunt-mocha-cli@2.1.0
+[0m[91mnpm info lifecycle minimatch@0.2.14~postinstall: minimatch@0.2.14
+[0m[91mnpm info lifecycle minimatch@0.3.0~postinstall: minimatch@0.3.0
+[0m[91mnpm info lifecycle glob@3.2.11~postinstall: glob@3.2.11
+[0m[91mnpm[0m[91m info lifecycle globule@0.2.0~postinstall: globule@0.2.0
+[0m[91mnpm info lifecycle gaze@1.0.0~postinstall: gaze@1.0.0
+[0m[91mnpm info lifecycle[0m[91m signal-exit@2.1.2~postinstall: signal-exit@2.1.2
+[0m[91mnpm info lifecycle loud-rejection@1.3.0~postinstall: loud-rejection@1.3.0
+[0m[91mnpm info lifecycle spdx-exceptions@1.0.4~postinstall: spdx-exceptions@1.0.4
+[0m[91mnpm info lifecycle spdx-license-ids@1.2.1~postinstall: spdx-license-ids@1.2.1
+[0m[91mnpm info lifecycle spdx-expression-parse@1.0.2~postinstall: spdx-expression-parse@1.0.2
+[0m[91mnpm info lifecycle spdx-correct@1.0.2~postinstall: spdx-correct@1.0.2
+npm info lifecycle sprintf-js@1.0.3~postinstall: sprintf-js@1.0.3
+[0m[91mnpm info lifecycle argparse@1.0.7~postinstall: argparse@1.0.7
+[0m[91mnpm info lifecycle js-yaml@3.5.5~postinstall: js-yaml@3.5.5
+[0m[91mnpm info lifecycle statuses@1.3.0~postinstall: statuses@1.3.0
+[0m[91mnpm info lifecycle http-errors@1.3.1~postinstall: http-errors@1.3.1
+[0m[91mnpm info lifecycle strip-ansi@3.0.1~postinstall: strip-ansi@3.0.1
+npm info lifecycle strip-bom@2.0.0~postinstall: strip-bom@2.0.0
+[0m[91mnpm info lifecycle load-json-file@1.1.0~postinstall: load-json-file@1.1.0
+npm info lifecycle strip-indent@1.0.1~postinstall: strip-indent@1.0.1
+[0m[91mnpm info [0m[91mlifecycle[0m[91m redent@1.0.0~postinstall: redent@1.0.0
+[0m[91mnpm info lifecycle[0m[91m supports-color@2.0.0~postinstall: supports-color@2.0.0
+[0m[91mnpm info lifecycle chalk@1.1.3~postinstall: chalk@1.1.3
+[0m[91mnpm info lifecycle grunt-legacy-log-utils@1.0.0~postinstall: grunt-legacy-log-utils@1.0.0
+[0m[91mnpm info lifecycle trim-newlines@1.0.0~postinstall: trim-newlines@1.0.0
+[0m[91mnpm info lifecycle type-is@1.6.13~postinstall: type-is@1.6.13
+[0m[91mnpm info lifecycle underscore.string@3.2.3~postinstall: underscore.string@3.2.3
+[0m[91mnpm info lifecycle grunt-legacy-log@1.0.0~postinstall: grunt-legacy-log@1.0.0
+[0m[91mnpm info lifecycle unpipe@1.0.0~postinstall: unpipe@1.0.0
+npm info lifecycle raw-body@2.1.6~postinstall: raw-body@2.1.6
+[0m[91mnpm info lifecycle body-parser@1.14.2~postinstall: body-parser@1.14.2
+[0m[91mnpm info lifecycle uri-path@1.0.0~postinstall: uri-path@1.0.0
+[0m[91mnpm info[0m[91m lifecycle grunt-contrib-coffee@1.0.0~postinstall: grunt-contrib-coffee@1.0.0
+[0m[91mnpm info lifecycle[0m[91m validate-npm-package-license@3.0.1~postinstall: validate-npm-package-license@3.0.1
+[0m[91mnpm info lifecycle normalize-package-data@2.3.5~postinstall: normalize-package-data@2.3.5
+npm info lifecycle read-pkg@1.1.0~postinstall: read-pkg@1.1.0
+[0m[91mnpm info lifecycle read-pkg-up@1.0.1~postinstall: read-pkg-up@1.0.1
+[0m[91mnpm info[0m[91m lifecycle meow@3.7.0~postinstall: meow@3.7.0
+[0m[91mnpm info lifecycle dateformat@1.0.12~postinstall: dateformat@1.0.12
+[0m[91mnpm info lifecycle websocket-extensions@0.1.1~postinstall: websocket-extensions@0.1.1
+[0m[91mnpm info lifecycle websocket-driver@0.6.4~postinstall: websocket-driver@0.6.4
+[0m[91mnpm [0m[91minfo lifecycle faye-websocket@0.10.0~postinstall: faye-websocket@0.10.0
+[0m[91mnpm info [0m[91mlifecycle tiny-lr@0.2.1~postinstall: tiny-lr@0.2.1
+[0m[91mnpm info lifecycle grunt-contrib-watch@1.0.0~postinstall: grunt-contrib-watch@1.0.0
+[0m[91mnpm info lifecycle which@1.2.9~postinstall: which@1.2.9
+[0m[91mnpm info lifecycle[0m[91m grunt-legacy-util@1.0.0~postinstall: grunt-legacy-util@1.0.0
+[0m[91mnpm info lifecycle wrappy@1.0.2~postinstall: wrappy@1.0.2
+[0m[91mnpm info lifecycle once@1.3.3~postinstall: once@1.3.3
+[0m[91mnpm info lifecycle inflight@1.0.5~postinstall: inflight@1.0.5
+npm info lifecycle glob@7.0.3~postinstall: glob@7.0.3
+[0m[91mnpm info lifecycle rimraf@2.5.2~postinstall: rimraf@2.5.2
+[0m[91mnpm info lifecycle grunt-newer@1.2.0~postinstall: grunt-newer@1.2.0
+[0m[91mnpm info lifecycle rimraf@2.5.2~postinstall: rimraf@2.5.2
+npm info lifecycle grunt-contrib-clean@1.0.0~postinstall: grunt-contrib-clean@1.0.0
+[0m[91mnpm info lifecycle glob@5.0.15~postinstall: glob@5.0.15
+npm info lifecycle findup-sync@0.3.0~postinstall: findup-sync@0.3.0
+[0m[91mnpm info lifecycle grunt-cli@1.2.0~postinstall: grunt-cli@1.2.0
+[0m[91mnpm info lifecycle grunt@1.0.1~postinstall: grunt@1.0.1
+[0m[91mnpm info lifecycle sortbylist@0.0.1~preinstall: sortbylist@0.0.1
+[0m[91mnpm info [0m[91mlinkStuff[0m[91m sortbylist@0.0.1
+[0m[91mnpm info lifecycle sortbylist@0.0.1~install: sortbylist@0.0.1
+npm info lifecycle sortbylist@0.0.1~postinstall: sortbylist@0.0.1
+[0m[91mnpm info lifecycle sortbylist@0.0.1~prepublish: sortbylist@0.0.1
+[0msortbylist@0.0.1 /usr/src
++-- grunt@1.0.1 
+| +-- coffee-script@1.10.0 
+| +-- dateformat@1.0.12 
+| | +-- get-stdin@4.0.1 
+| | `-- meow@3.7.0 
+| |   +-- camelcase-keys@2.1.0 
+| |   | `-- camelcase@2.1.1 
+| |   +-- decamelize@1.2.0 
+| |   +-- loud-rejection@1.3.0 
+| |   | +-- array-find-index@1.0.1 
+| |   | `-- signal-exit@2.1.2 
+| |   +-- map-obj@1.0.1 
+| |   +-- minimist@1.2.0 
+| |   +-- normalize-package-data@2.3.5 
+| |   | +-- hosted-git-info@2.1.5 
+| |   | +-- is-builtin-module@1.0.0 
+| |   | | `-- builtin-modules@1.1.1 
+| |   | +-- semver@5.1.0 
+| |   | `-- validate-npm-package-license@3.0.1 
+| |   |   +-- spdx-correct@1.0.2 
+| |   |   | `-- spdx-license-ids@1.2.1 
+| |   |   `-- spdx-expression-parse@1.0.2 
+| |   |     `-- spdx-exceptions@1.0.4 
+| |   +-- object-assign@4.1.0 
+| |   +-- read-pkg-up@1.0.1 
+| |   | +-- find-up@1.1.2 
+| |   | | +-- path-exists@2.1.0 
+| |   | | `-- pinkie-promise@2.0.1 
+| |   | |   `-- pinkie@2.0.4 
+| |   | `-- read-pkg@1.1.0 
+| |   |   +-- load-json-file@1.1.0 
+| |   |   | +-- graceful-fs@4.1.4 
+| |   |   | +-- parse-json@2.2.0 
+| |   |   | | `-- error-ex@1.3.0 
+| |   |   | |   `-- is-arrayish@0.2.1 
+| |   |   | +-- pify@2.3.0 
+| |   |   | `-- strip-bom@2.0.0 
+| |   |   |   `-- is-utf8@0.2.1 
+| |   |   `-- path-type@1.1.0 
+| |   +-- redent@1.0.0 
+| |   | +-- indent-string@2.1.0 
+| |   | | `-- repeating@2.0.1 
+| |   | |   `-- is-finite@1.0.1 
+| |   | |     `-- number-is-nan@1.0.0 
+| |   | `-- strip-indent@1.0.1 
+| |   `-- trim-newlines@1.0.0 
+| +-- eventemitter2@0.4.14 
+| +-- exit@0.1.2 
+| +-- findup-sync@0.3.0 
+| | `-- glob@5.0.15 
+| +-- glob@7.0.3 
+| | +-- inflight@1.0.5 
+| | | `-- wrappy@1.0.2 
+| | +-- inherits@2.0.1 
+| | `-- once@1.3.3 
+| +-- grunt-cli@1.2.0 
+| | `-- resolve@1.1.7 
+| +-- grunt-known-options@1.1.0 
+| +-- grunt-legacy-log@1.0.0 
+| | +-- colors@1.1.2 
+| | +-- grunt-legacy-log-utils@1.0.0 
+| | | +-- chalk@1.1.3 
+| | | | +-- has-ansi@2.0.0 
+| | | | | `-- ansi-regex@2.0.0 
+| | | | +-- strip-ansi@3.0.1 
+| | | | `-- supports-color@2.0.0 
+| | | `-- lodash@4.3.0 
+| | +-- hooker@0.2.3 
+| | +-- lodash@3.10.1 
+| | `-- underscore.string@3.2.3 
+| +-- grunt-legacy-util@1.0.0 
+| | +-- getobject@0.1.0 
+| | +-- lodash@4.3.0 
+| | `-- which@1.2.9 
+| |   `-- isexe@1.1.2 
+| +-- iconv-lite@0.4.13 
+| +-- js-yaml@3.5.5 
+| | +-- argparse@1.0.7 
+| | | `-- sprintf-js@1.0.3 
+| | `-- esprima@2.7.2 
+| +-- minimatch@3.0.0 
+| | `-- brace-expansion@1.1.4 
+| |   +-- balanced-match@0.4.1 
+| |   `-- concat-map@0.0.1 
+| +-- nopt@3.0.6 
+| | `-- abbrev@1.0.7 
+| +-- path-is-absolute@1.0.0 
+| `-- rimraf@2.2.8 
++-- grunt-contrib-clean@1.0.0 
+| +-- async@1.5.2 
+| `-- rimraf@2.5.2 
++-- grunt-contrib-coffee@1.0.0 
+| +-- chalk@1.0.0 
+| | +-- ansi-styles@2.2.1 
+| | +-- escape-string-regexp@1.0.5 
+| | +-- has-ansi@1.0.3 
+| | | `-- ansi-regex@1.1.1 
+| | +-- strip-ansi@2.0.1 
+| | `-- supports-color@1.3.1 
+| +-- lodash@4.3.0 
+| `-- uri-path@1.0.0 
++-- grunt-contrib-watch@1.0.0 
+| +-- gaze@1.0.0 
+| | `-- globule@0.2.0 
+| |   +-- glob@3.2.11 
+| |   | `-- minimatch@0.3.0 
+| |   +-- lodash@2.4.2 
+| |   `-- minimatch@0.2.14 
+| |     +-- lru-cache@2.7.3 
+| |     `-- sigmund@1.0.1 
+| +-- lodash@3.10.1 
+| `-- tiny-lr@0.2.1 
+|   +-- body-parser@1.14.2 
+|   | +-- bytes@2.2.0 
+|   | +-- content-type@1.0.2 
+|   | +-- depd@1.1.0 
+|   | +-- http-errors@1.3.1 
+|   | | `-- statuses@1.3.0 
+|   | +-- on-finished@2.3.0 
+|   | | `-- ee-first@1.1.1 
+|   | +-- qs@5.2.0 
+|   | +-- raw-body@2.1.6 
+|   | | +-- bytes@2.3.0 
+|   | | `-- unpipe@1.0.0 
+|   | `-- type-is@1.6.13 
+|   |   +-- media-typer@0.3.0 
+|   |   `-- mime-types@2.1.11 
+|   |     `-- mime-db@1.23.0 
+|   +-- debug@2.2.0 
+|   | `-- ms@0.7.1 
+|   +-- faye-websocket@0.10.0 
+|   | `-- websocket-driver@0.6.4 
+|   |   `-- websocket-extensions@0.1.1 
+|   +-- livereload-js@2.2.2 
+|   +-- parseurl@1.3.1 
+|   `-- qs@5.1.0 
++-- grunt-include-replace@4.0.1 
++-- grunt-mocha-cli@2.1.0 
+| `-- mocha@2.4.5 
+|   +-- commander@2.3.0 
+|   +-- diff@1.4.0 
+|   +-- escape-string-regexp@1.0.2 
+|   +-- glob@3.2.3 
+|   | +-- graceful-fs@2.0.3 
+|   | `-- minimatch@0.2.14 
+|   +-- growl@1.8.1 
+|   +-- jade@0.26.3 
+|   | +-- commander@0.6.1 
+|   | `-- mkdirp@0.3.0 
+|   +-- mkdirp@0.5.1 
+|   | `-- minimist@0.0.8 
+|   `-- supports-color@1.2.0 
++-- grunt-newer@1.2.0 
+| `-- rimraf@2.5.2 
++-- lodash@4.12.0 
+`-- should@8.3.2 
+  +-- should-equal@0.7.3 
+  +-- should-format@0.3.2 
+  `-- should-type@0.2.0 
+
+[91mnpm info ok 
+[0m ---> 351bd75bef32
+Removing intermediate container 084cfa7cc2cf
+Step 9 : COPY lib/ /usr/src/lib/
+ ---> e2a26b0129c1
+Removing intermediate container a97ab9cfde32
+Step 10 : COPY test/ /usr/src/test/
+ ---> bb5043629b06
+Removing intermediate container 48dcb7c80214
+Step 11 : COPY index.js /usr/src/
+ ---> dbf5907cd2c2
+Removing intermediate container df1887de8e50
+Step 12 : COPY dockertests/test.sh /usr/src/test.sh
+ ---> fcca97f06da0
+Removing intermediate container a73eb060152b
+Step 13 : RUN chmod +x /usr/src/test.sh
+ ---> Running in a3120e33716b
+ ---> 9fae590a27c7
+Removing intermediate container a3120e33716b
+Step 14 : CMD /usr/src/test.sh
+ ---> Running in fe4a2ef8dcb7
+ ---> 20805d8600d0
+Removing intermediate container fe4a2ef8dcb7
+Successfully built 20805d8600d0

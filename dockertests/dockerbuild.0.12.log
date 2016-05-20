@@ -1,0 +1,113 @@
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon 19.07 MB
+Step 1 : FROM node:0.12
+ ---> 57729a814359
+Step 2 : MAINTAINER M. Peter <mp@tcs.de>
+ ---> Using cache
+ ---> a218bf88ba3a
+Step 3 : RUN apt-get update -qq && apt-get upgrade -y && apt-get install -y build-essential
+ ---> Using cache
+ ---> 5cafe7a5c6c4
+Step 4 : RUN mkdir -p /usr/src/
+ ---> Using cache
+ ---> 0a119897b740
+Step 5 : WORKDIR /usr/src/
+ ---> Using cache
+ ---> 5e870406bfc8
+Step 6 : COPY package.json /usr/src/package.json
+ ---> 614112abb4fa
+Removing intermediate container 7a717497f01a
+Step 7 : RUN npm install -g mocha
+ ---> Running in 79f31bc34834
+[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated jade@0.26.3: Jade has been renamed to pug, please install the latest version of pug instead of jade
+[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m graceful-fs@2.0.3: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
+[0m/usr/local/bin/mocha -> /usr/local/lib/node_modules/mocha/bin/mocha
+/usr/local/bin/_mocha -> /usr/local/lib/node_modules/mocha/bin/_mocha
+mocha@2.4.5 /usr/local/lib/node_modules/mocha
+├── escape-string-regexp@1.0.2
+├── supports-color@1.2.0
+├── growl@1.8.1
+├── commander@2.3.0
+├── diff@1.4.0
+├── jade@0.26.3 (commander@0.6.1, mkdirp@0.3.0)
+├── debug@2.2.0 (ms@0.7.1)
+├── mkdirp@0.5.1 (minimist@0.0.8)
+└── glob@3.2.3 (inherits@2.0.1, graceful-fs@2.0.3, minimatch@0.2.14)
+ ---> b260614ef366
+Removing intermediate container 79f31bc34834
+Step 8 : RUN npm install
+ ---> Running in 248bad8787d2
+[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mpackage.json[0m[91m sortbylist@0.0.1 No README data
+[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m jade@0.26.3: Jade has been renamed to pug, please install the latest version of pug instead of jade
+[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m graceful-fs@2.0.3: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
+[0mgrunt-include-replace@4.0.1 node_modules/grunt-include-replace
+
+grunt-newer@1.2.0 node_modules/grunt-newer
+├── async@1.5.2
+└── rimraf@2.5.2 (glob@7.0.3)
+
+grunt-contrib-clean@1.0.0 node_modules/grunt-contrib-clean
+├── async@1.5.2
+└── rimraf@2.5.2 (glob@7.0.3)
+
+should@8.3.2 node_modules/should
+├── should-type@0.2.0
+├── should-equal@0.7.3
+└── should-format@0.3.2
+
+grunt-mocha-cli@2.1.0 node_modules/grunt-mocha-cli
+└── mocha@2.4.5 (escape-string-regexp@1.0.2, supports-color@1.2.0, growl@1.8.1, commander@2.3.0, diff@1.4.0, debug@2.2.0, mkdirp@0.5.1, glob@3.2.3, jade@0.26.3)
+
+grunt-contrib-watch@1.0.0 node_modules/grunt-contrib-watch
+├── async@1.5.2
+├── tiny-lr@0.2.1 (parseurl@1.3.1, debug@2.2.0, qs@5.1.0, livereload-js@2.2.2, faye-websocket@0.10.0, body-parser@1.14.2)
+├── gaze@1.0.0 (globule@0.2.0)
+└── lodash@3.10.1
+
+grunt-contrib-coffee@1.0.0 node_modules/grunt-contrib-coffee
+├── uri-path@1.0.0
+├── chalk@1.0.0 (escape-string-regexp@1.0.5, ansi-styles@2.2.1, supports-color@1.3.1, strip-ansi@2.0.1, has-ansi@1.0.3)
+├── coffee-script@1.10.0
+└── lodash@4.3.0
+
+lodash@4.12.0 node_modules/lodash
+
+grunt@1.0.1 node_modules/grunt
+├── path-is-absolute@1.0.0
+├── grunt-known-options@1.1.0
+├── eventemitter2@0.4.14
+├── rimraf@2.2.8
+├── exit@0.1.2
+├── nopt@3.0.6 (abbrev@1.0.7)
+├── glob@7.0.3 (inherits@2.0.1, inflight@1.0.5, once@1.3.3)
+├── findup-sync@0.3.0 (glob@5.0.15)
+├── minimatch@3.0.0 (brace-expansion@1.1.4)
+├── iconv-lite@0.4.13
+├── coffee-script@1.10.0
+├── grunt-cli@1.2.0 (resolve@1.1.7)
+├── js-yaml@3.5.5 (esprima@2.7.2, argparse@1.0.7)
+├── dateformat@1.0.12 (get-stdin@4.0.1, meow@3.7.0)
+├── grunt-legacy-util@1.0.0 (getobject@0.1.0, hooker@0.2.3, which@1.2.9, async@1.5.2, underscore.string@3.2.3, lodash@4.3.0)
+└── grunt-legacy-log@1.0.0 (hooker@0.2.3, colors@1.1.2, underscore.string@3.2.3, lodash@3.10.1, grunt-legacy-log-utils@1.0.0)
+ ---> d4598ba98169
+Removing intermediate container 248bad8787d2
+Step 9 : COPY lib/ /usr/src/lib/
+ ---> 9f0dd4f33438
+Removing intermediate container 04ed5fde27c7
+Step 10 : COPY test/ /usr/src/test/
+ ---> e45219229ea3
+Removing intermediate container cc0bab4799b2
+Step 11 : COPY index.js /usr/src/
+ ---> fd3127457b40
+Removing intermediate container 103c2a4921b9
+Step 12 : COPY dockertests/test.sh /usr/src/test.sh
+ ---> 23ec6f8e199e
+Removing intermediate container d58de9c1921f
+Step 13 : RUN chmod +x /usr/src/test.sh
+ ---> Running in fa43aff38b8a
+ ---> 4c3058d4ea46
+Removing intermediate container fa43aff38b8a
+Step 14 : CMD /usr/src/test.sh
+ ---> Running in 05fb8b998a03
+ ---> 30ae9baf2b8b
+Removing intermediate container 05fb8b998a03
+Successfully built 30ae9baf2b8b

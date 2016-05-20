@@ -1,0 +1,43 @@
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon 19.09 MB
+Step 1 : FROM node:latest
+ ---> 04a4aab809b8
+Step 2 : MAINTAINER M. Peter <mp@tcs.de>
+ ---> Using cache
+ ---> f0cbc00404c4
+Step 3 : RUN apt-get update -qq && apt-get upgrade -y && apt-get install -y build-essential
+ ---> Using cache
+ ---> 3580a591a69a
+Step 4 : RUN mkdir -p /usr/src/
+ ---> Using cache
+ ---> 81fce8d02f69
+Step 5 : WORKDIR /usr/src/
+ ---> Using cache
+ ---> 2e05c60516dc
+Step 6 : COPY package.json /usr/src/package.json
+ ---> Using cache
+ ---> 2e846b8916b3
+Step 7 : RUN npm install -g mocha
+ ---> Using cache
+ ---> a3963fac7178
+Step 8 : RUN npm install
+ ---> Using cache
+ ---> 351bd75bef32
+Step 9 : COPY lib/ /usr/src/lib/
+ ---> Using cache
+ ---> e2a26b0129c1
+Step 10 : COPY test/ /usr/src/test/
+ ---> Using cache
+ ---> bb5043629b06
+Step 11 : COPY index.js /usr/src/
+ ---> Using cache
+ ---> dbf5907cd2c2
+Step 12 : COPY dockertests/test.sh /usr/src/test.sh
+ ---> Using cache
+ ---> fcca97f06da0
+Step 13 : RUN chmod +x /usr/src/test.sh
+ ---> Using cache
+ ---> 9fae590a27c7
+Step 14 : CMD /usr/src/test.sh
+ ---> Using cache
+ ---> 20805d8600d0
+Successfully built 20805d8600d0
