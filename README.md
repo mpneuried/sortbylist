@@ -6,7 +6,7 @@ sortbylist
 [![Dependency Status](https://david-dm.org/mpneuried/sortbylist.png)](https://david-dm.org/mpneuried/sortbylist)
 [![NPM version](https://badge.fury.io/js/sortbylist.png)](http://badge.fury.io/js/sortbylist)
 
-Small helper to sort a collection by a given list of id&#39;s
+Small helper to sort a collection by a given list of id's
 
 [![NPM](https://nodei.co/npm/sortbylist.png?downloads=true&stars=true)](https://nodei.co/npm/sortbylist/)
 
@@ -19,17 +19,31 @@ Small helper to sort a collection by a given list of id&#39;s
 ## Initialize
 
 ```js
-  // TODO init code
+var sortByList = require( "sortbylist" );
+
+var DATA = [
+	{id: "A"},
+	{id: "B"},
+	{id: "C"},
+	{id: "D"},
+	{id: "E"},
+	{id: "F"}
+];
+
+sorted = sortByList( DATA, [ "D", "C", "B" ] )
+// sorted will have the order D, C, B, A, E, F
+// unsorted id's because the rest will be added tt the end
 ```
 
-**Options** 
+**Arguments** 
 
-- **foo** : *( `String` required )* TODO option description
-- **bar** : *( `Number` optional: default = `123` )* TODO option description
+- **data** : *( `Object[]` required )* A collection to sort
+- **list** : *( `Array` optional: default = `[]` )* The list to sort the collection
+- **options** : *( `Object` optional )* Configuration
+  - **options.key** : *( `String` optional: default = `id` )* The unique key to get a element inside the collection.
+  - **options.prepend** : *( `Boolean` optional: default = `false` )* Prepend the rest instead of appending the undefined sort id's to the end
 
-## Todos
-
- * implement test cases to check for correct template generation.
+**NOTE!**: If you are using a non unique key, only the first found element will sorted. All other will be appended/prepended.
 
 ## Testing
 
@@ -77,7 +91,7 @@ To run the tests through the defined versions run the following command:
 ## Release History
 |Version|Date|Description|
 |:--:|:--:|:--|
-|0.0.1|2016-5-20|Initial commit|
+|0.0.1|2016-5-20|Initial version|
 
 [![NPM](https://nodei.co/npm-dl/sortbylist.png?months=6)](https://nodei.co/npm/sortbylist/)
 

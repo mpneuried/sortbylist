@@ -30,8 +30,9 @@ module.exports = ( data, list=[], options={} )->
 	res = []
 	for _l in list
 		_idx = index.indexOf( _l )
-		if _idx >= 0
-			indexCheck.splice( indexCheck.indexOf( _l ), 1 )
+		_idxCheck = indexCheck.indexOf( _l )
+		if _idx >= 0 and _idxCheck >= 0
+			indexCheck.splice( _idxCheck, 1 )
 			res.push data[_idx]
 	
 	# if indexCheck is empty all data elements where added
