@@ -91,6 +91,7 @@ To run the tests through the defined versions run the following command:
 ## Release History
 |Version|Date|Description|
 |:--:|:--:|:--|
+|0.0.2|2016-5-23|Fixed min. required node version|
 |0.0.1|2016-5-20|Initial version|
 
 [![NPM](https://nodei.co/npm-dl/sortbylist.png?months=6)](https://nodei.co/npm/sortbylist/)
